@@ -1,0 +1,94 @@
+relationship ae9385c4-b237-41c6-a52d-5ff0d4dec9d9
+	fromColumn: Alert.AlertSeverityId
+	toColumn: 'Alert Severity'.Id
+
+	annotation PBI_IsFromSource = FS
+
+relationship 09df61c6-0674-4411-8db9-e21fc58aba38
+	fromColumn: Alert.AlertTypeId
+	toColumn: 'Alert Type'.Id
+
+	annotation PBI_IsFromSource = FS
+
+relationship b683c276-230f-4927-a2a9-2de369559d79
+	fromColumn: Alert.RepairCostEstimateId
+	toColumn: 'Repair Cost Estimate'.Id
+
+	annotation PBI_IsFromSource = FS
+
+relationship 59662321-4195-4fda-8d63-56031bfd41fb
+	fromColumn: Alert.VehicleId
+	toColumn: Vehicle.Id
+
+	annotation PBI_IsFromSource = FS
+
+relationship 38fd0404-5e0a-4b34-ac89-ca35f11ffc38
+	fromColumn: Vehicle.VehicleLocationId
+	toColumn: 'Vehicle Home Location'.Id
+
+	annotation PBI_IsFromSource = FS
+
+relationship bc3abd35-d534-ce3f-2980-d8f21675bb21
+	fromColumn: 'Alert Fault'.AlertId
+	toColumn: Alert.Id
+
+relationship 131d5b6f-7fc8-e179-d57e-80ea1b78194a
+	fromColumn: Vehicle.VehicleMakeId
+	toColumn: 'Vehicle Make'.Id
+
+relationship 68d4398f-828a-0ad1-1ed6-af3b923de8af
+	fromColumn: Vehicle.VehicleModelId
+	toColumn: 'Vehicle Model'.Id
+
+relationship e2089a7f-9546-d1cf-d0da-851b93f792de
+	fromColumn: Alert.'Create Date'
+	toColumn: Dates.Date
+
+relationship e6b9d393-1b56-de27-0f09-b566f2b78224
+	fromColumn: 'Alert Type Severity Est Cost'.AlertTypeId
+	toColumn: 'Alert Type'.Id
+
+relationship c92cf756-ee01-d4fd-1655-7535d4130aa5
+	fromColumn: 'Alert Type Severity Est Cost'.AlertSeverityId
+	toColumn: 'Alert Severity'.Id
+
+relationship d2d6be9c-dbe9-0a20-b5bf-bf4ca78b3b42
+	fromColumn: 'Vehicle Sequence Duration Between New Alerts'.VehicleId
+	toColumn: Vehicle.Id
+
+relationship 0dfb2a8f-3e18-5b4a-7e1b-1c4efb0e49cf
+	fromColumn: 'Vehicle Sequence Duration Between New Alerts'.'Created Date'
+	toColumn: Dates.Date
+
+relationship 25067944-b84c-2be4-121f-419aaeb5cdde
+	fromColumn: 'Vehicle Sequence Duration Between New Alerts'.AlertTypeId
+	toColumn: 'Alert Type'.Id
+
+relationship c3d160a3-2ae0-4c75-983f-9293abeb772b
+	fromColumn: 'Vehicle Sequence Duration Between New Alerts'.AlertSeverityId
+	toColumn: 'Alert Severity'.Id
+
+relationship 16d55ca0-2ec8-ce83-a340-94778257c957
+	fromColumn: 'Alerts Same Sequence'.AlertTypeId
+	toColumn: 'Alert Type'.Id
+
+relationship d5625639-542c-2b17-b61c-c1623fcce732
+	fromColumn: 'Alerts Same Sequence'.VehicleId
+	toColumn: Vehicle.Id
+
+relationship dbe67b62-d0c6-ca54-6c64-b6cfd4512d59
+	fromColumn: 'Alerts Same Sequence'.AlertSeverity
+	toColumn: 'Alert Severity'.Id
+
+relationship 8b30d2cc-0bc8-86e5-9bfe-26756683bafe
+	fromColumn: 'Alerts Same Sequence'.'Created Date'
+	toColumn: Dates.Date
+
+relationship da9f91fe-c794-2cad-97fa-d446c45fe1fe
+	fromColumn: 'Alert Refined Count'.AlertTypeId
+	toColumn: 'Alert Type'.Id
+
+relationship d5552565-dee7-72c0-3d18-6c96efd00295
+	fromColumn: 'Alert Refined Count'.VehicleId
+	toColumn: Vehicle.Id
+

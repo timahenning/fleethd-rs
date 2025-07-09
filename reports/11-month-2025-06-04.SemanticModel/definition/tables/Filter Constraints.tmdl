@@ -1,0 +1,33 @@
+table 'Filter Constraints'
+	lineageTag: bcd91a77-786b-48be-8d82-fd8993e915b4
+
+	column Constraint
+		dataType: string
+		lineageTag: ab679380-490d-40ae-93c7-c047a82cf8e0
+		summarizeBy: none
+		sourceColumn: Constraint
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Constraint Value'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2b0427f7-17a0-4ff6-b0ca-2552111ef596
+		summarizeBy: sum
+		sourceColumn: Constraint Value
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Filter Constraints' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WckmsLFZwSi0pT81TSMsvUvBLLVdwzEktKlHSUTI0VIqNBQA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Constraint = _t, #"Constraint Value" = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Constraint", type text}, {"Constraint Value", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

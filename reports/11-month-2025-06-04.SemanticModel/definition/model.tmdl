@@ -1,0 +1,51 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+extendedProperty TabularEditor_DeploymentMetadata =
+		{
+		  "User": "THENNIN_AW2\\timah",
+		  "Time": "2025-06-27T06:18:42.0186185-07:00",
+		  "ClientMachine": "THENNIN_AW2",
+		  "DeploymentMode": "SaveUI",
+		  "TabularEditorBuild": "2.25.8952.22276"
+		}
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBIDesktopVersion = 2.144.1155.0 (25.06)+46435b07013d2a234d7fd007083a9e70b8e79f1c
+
+annotation PBI_QueryOrder = ["Dates","Alert","Alert Fault","Alert Severity","Alert Type","Repair Cost Estimate","Vehicle","Vehicle Home Location","Make Model","Vehicle Model","Vehicle Make","Tenant","Filter Constraints","Alerts Last Per Vehicle Alert Type","Alert Type Severity Est Cost","Alerts Same Sequence","Vehicle Sequence Duration Between New Alerts","Alert Refined Count"]
+
+annotation __TEdtr = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Calculations
+ref table Dates
+ref table Alert
+ref table 'Alert Severity'
+ref table 'Alert Type'
+ref table 'Repair Cost Estimate'
+ref table Vehicle
+ref table 'Vehicle Home Location'
+ref table 'Make Model'
+ref table 'Alert Fault'
+ref table 'Vehicle Model'
+ref table 'Vehicle Make'
+ref table Tenant
+ref table 'Filter Constraints'
+ref table 'Alerts Last Per Vehicle Alert Type'
+ref table 'Alert Type Severity Est Cost'
+ref table 'Whole Numbers'
+ref table Parameter
+ref table 'Alerts Same Sequence'
+ref table 'Vehicle Sequence Duration Between New Alerts'
+ref table 'Alert Refined Count'
+
+ref cultureInfo en-US
+

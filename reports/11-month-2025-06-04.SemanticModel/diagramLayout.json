@@ -1,0 +1,311 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 539.33331298828125,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 538.35681860988825,
+            "y": 0
+          },
+          "nodeIndex": "Dates",
+          "nodeLineageTag": "605664f8-e8d1-4f7e-bc5c-8ceac0fecd77",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 9,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 994.514379240951,
+            "y": 263.68421186666444
+          },
+          "nodeIndex": "Alert",
+          "nodeLineageTag": "d75c2e84-8d53-486f-acff-76616ac0ed6a",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 403
+        },
+        {
+          "location": {
+            "x": 503.05687494334904,
+            "y": 285.73966347132347
+          },
+          "nodeIndex": "Vehicle",
+          "nodeLineageTag": "e1bc9e28-e1db-49f0-91fa-de17da13f67a",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 367
+        },
+        {
+          "location": {
+            "x": 1129.3568186098883,
+            "y": 0
+          },
+          "nodeIndex": "Alert Type",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 128
+        },
+        {
+          "location": {
+            "x": 845.900344924635,
+            "y": 0
+          },
+          "nodeIndex": "Repair Cost Estimate",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 128
+        },
+        {
+          "location": {
+            "x": 273.87382013811521,
+            "y": 0
+          },
+          "nodeIndex": "Vehicle Home Location",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 128
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Make Model",
+          "nodeLineageTag": "e9fb50b7-07d3-469b-890a-dbfbdc287ae0",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 128
+        },
+        {
+          "location": {
+            "x": 1417.551629257644,
+            "y": 0
+          },
+          "nodeIndex": "Alert Severity",
+          "nodeLineageTag": "dd550832-a06a-4418-8316-d15ec5045e7d",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 128
+        },
+        {
+          "location": {
+            "x": 2247.457107154215,
+            "y": 237.36983173566171
+          },
+          "nodeIndex": "Tenant",
+          "nodeLineageTag": "6f122d10-f836-4dd4-b800-781c581193aa",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 128
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 363.36983173566171
+          },
+          "nodeIndex": "Vehicle Model",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 128
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 173.36983173566171
+          },
+          "nodeIndex": "Vehicle Make",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 128
+        },
+        {
+          "location": {
+            "x": 1339.457107154215,
+            "y": 261.86983173566171
+          },
+          "nodeIndex": "Alert Fault",
+          "nodeLineageTag": "4c4a56f1-a749-4219-a592-b620f476f36f",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 296
+        },
+        {
+          "location": {
+            "x": 2242.957107154215,
+            "y": 0
+          },
+          "nodeIndex": "Filter Constraints",
+          "nodeLineageTag": "bcd91a77-786b-48be-8d82-fd8993e915b4",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 128
+        },
+        {
+          "location": {
+            "x": 2247.957107154215,
+            "y": 144.93263365829648
+          },
+          "nodeIndex": "Calculations",
+          "nodeLineageTag": "fcf09bff-1169-45a9-8e2f-c2da471fb499",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 2501.957107154215,
+            "y": 128.93491586783085
+          },
+          "nodeIndex": "Alerts Last Per Vehicle Alert Type",
+          "nodeLineageTag": "6e89a971-dee7-4e2e-b9a9-85f9d0c2cff7",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 1661.957107154215,
+            "y": 262.93491586783085
+          },
+          "nodeIndex": "Alert Type Severity Est Cost",
+          "nodeLineageTag": "97420dac-954e-447f-a1c4-d7617d0837cc",
+          "size": {
+            "height": 128,
+            "width": 315
+          },
+          "zIndex": 0,
+          "expandedHeight": 280
+        },
+        {
+          "location": {
+            "x": 2223.957107154215,
+            "y": 468.93491586783085
+          },
+          "nodeIndex": "Whole Numbers",
+          "nodeLineageTag": "79787d9b-9e34-45da-a153-3ed317795e35",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 2280.957107154215,
+            "y": 347.93491586783085
+          },
+          "nodeIndex": "Parameter",
+          "nodeLineageTag": "0b2952ef-0213-4d5a-a123-c5c0fe1aed90",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 152
+        },
+        {
+          "location": {
+            "x": 1547.957107154215,
+            "y": 476.93491586783085
+          },
+          "nodeIndex": "Alerts Same Sequence",
+          "nodeLineageTag": "decb2b93-c0b9-465f-9611-964c63b30a87",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 134.957107154215,
+            "y": 578.9349158678308
+          },
+          "nodeIndex": "Vehicle Sequence Duration Between New Alerts",
+          "nodeLineageTag": "a77c7a48-6bc4-4f8d-9a68-42255903010a",
+          "size": {
+            "height": 128,
+            "width": 350
+          },
+          "zIndex": 0,
+          "expandedHeight": 272
+        },
+        {
+          "location": {
+            "x": 1867.957107154215,
+            "y": 474.4674579339154
+          },
+          "nodeIndex": "Alert Refined Count",
+          "nodeLineageTag": "a6abdffc-46e4-4ffa-8e93-de3aa48647e5",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 152
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": true,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

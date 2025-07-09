@@ -1,0 +1,285 @@
+table Alert
+	lineageTag: d75c2e84-8d53-486f-acff-76616ac0ed6a
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 18587f50-d3a2-41fb-b956-a77b0f07f4ad
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column VehicleId
+		dataType: int64
+		formatString: 0
+		lineageTag: 771a0c77-27d8-4d9f-ae6b-88fc51cab30d
+		summarizeBy: none
+		sourceColumn: VehicleId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDateTimeUtc
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3585f8c7-5041-4eb0-a9a6-15ea083089d8
+		summarizeBy: none
+		sourceColumn: CreatedDateTimeUtc
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertTypeId
+		dataType: int64
+		formatString: 0
+		lineageTag: 2aaf9dfa-ec17-4b95-a6bf-29c8985427f9
+		summarizeBy: none
+		sourceColumn: AlertTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertSeverityId
+		dataType: int64
+		formatString: 0
+		lineageTag: 988e17d0-bbb0-49b9-a2bb-dcc0c56687f9
+		summarizeBy: none
+		sourceColumn: AlertSeverityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertOdometor
+		dataType: double
+		lineageTag: e837c9b1-bc11-47e3-97b2-9fad5760d14b
+		summarizeBy: sum
+		sourceColumn: AlertOdometor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Latitude
+		dataType: double
+		lineageTag: 41135633-08ec-4046-a34b-c1339023467f
+		summarizeBy: sum
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Longitude
+		dataType: double
+		lineageTag: 62de9213-1d52-41b9-b2d5-8ec4698dd925
+		summarizeBy: sum
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RepairCostEstimateId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d5d9d60-550b-4a6c-9326-16adbbda2a05
+		summarizeBy: none
+		sourceColumn: RepairCostEstimateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TriggeredFaultFmi
+		dataType: int64
+		formatString: 0
+		lineageTag: db076ce1-4480-4afa-a86a-af94ff6b354c
+		summarizeBy: sum
+		sourceColumn: TriggeredFaultFmi
+
+		annotation SummarizationSetBy = Automatic
+
+	column TriggeredFaultSpn
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c24afaa-1615-4f96-9735-095eaf13e18f
+		summarizeBy: sum
+		sourceColumn: TriggeredFaultSpn
+
+		annotation SummarizationSetBy = Automatic
+
+	column TriggeredFaultSource
+		dataType: int64
+		formatString: 0
+		lineageTag: d08ecadf-e90c-4897-966a-c69a6e336259
+		summarizeBy: sum
+		sourceColumn: TriggeredFaultSource
+
+		annotation SummarizationSetBy = Automatic
+
+	column TriggeredFaultCount
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d6a0190-8106-423d-b7d0-f0f5d01dc36d
+		summarizeBy: sum
+		sourceColumn: TriggeredFaultCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Estimated Repair Amount'
+		dataType: double
+		lineageTag: 7521c740-6d41-4434-9b08-4ebeeca2fe7e
+		summarizeBy: sum
+		sourceColumn: Estimated Repair Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrevCreatedDateTimeUtc
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8253ae81-13f8-475a-b3e2-9e391862a9b0
+		summarizeBy: none
+		sourceColumn: PrevCreatedDateTimeUtc
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrevAlertOdometer
+		dataType: double
+		lineageTag: 673afb4f-4fb1-46dd-9561-50c3878b8dea
+		summarizeBy: sum
+		sourceColumn: PrevAlertOdometer
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MilesBetweenAlerts
+		dataType: double
+		lineageTag: 99b7382e-c603-4d24-8d1f-159a6c91dc66
+		summarizeBy: sum
+		sourceColumn: MilesBetweenAlerts
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"Alert","TableItemName":"MilesBetweenAlerts (bins)","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column DaysDifference
+		dataType: int64
+		formatString: 0
+		lineageTag: ace8916a-9ae6-4ae8-a99c-db2cc192beb8
+		summarizeBy: sum
+		sourceColumn: DaysDifference
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"Alert","TableItemName":"DaysDifference (bins)","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column 'Create Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 23065be1-f669-4772-9cd2-68d422ad958e
+		summarizeBy: none
+		sourceColumn: Create Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'DaysDifference (bins)' =
+			IF(
+				ISBLANK('Alert'[DaysDifference]),
+				BLANK(),
+				INT('Alert'[DaysDifference] / 2) * 2
+			)
+		formatString: 0
+		lineageTag: 9f997912-8280-4ee6-ad93-20c25598f443
+		summarizeBy: none
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "Alert"
+				          }
+				        },
+				        "Property": "DaysDifference"
+				      }
+				    }
+				  ],
+				  "binningMetadata": {
+				    "binSize": {
+				      "value": 2.0,
+				      "unit": 0
+				    }
+				  }
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"a","Entity":"Alert"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"a"}},"Property":"DaysDifference"}}],"BinItem":{"Expression":{"Floor":{"Expression":{"Column":{"Expression":{"SourceRef":{"Source":"a"}},"Property":"DaysDifference"}},"Size":2.0}}}}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'MilesBetweenAlerts (bins)' =
+			IF(
+				ISBLANK('Alert'[MilesBetweenAlerts]),
+				BLANK(),
+				IF(
+					'Alert'[MilesBetweenAlerts] >= 0,
+					ROUNDDOWN('Alert'[MilesBetweenAlerts] / 100, 0) * 100,
+					ROUNDUP('Alert'[MilesBetweenAlerts] / 100, 0) * 100
+				)
+			)
+		lineageTag: ee8e4fe3-0bef-45fb-9a63-a299d56f9466
+		summarizeBy: none
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "Alert"
+				          }
+				        },
+				        "Property": "MilesBetweenAlerts"
+				      }
+				    }
+				  ],
+				  "binningMetadata": {
+				    "binSize": {
+				      "value": 100.0,
+				      "unit": 0
+				    }
+				  }
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"a","Entity":"Alert"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"a"}},"Property":"MilesBetweenAlerts"}}],"BinItem":{"Expression":{"Floor":{"Expression":{"Column":{"Expression":{"SourceRef":{"Source":"a"}},"Property":"MilesBetweenAlerts"}},"Size":100.0}}}}
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Alert = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("."),
+				    fld_rs = Source{[Name="fld_rs"]}[Data],
+				    dbo_Alert = fld_rs{[Schema="dbo",Item="vw_alert"]}[Data],
+				    #"Merged Queries" = Table.NestedJoin(dbo_Alert, {"RepairCostEstimateId"}, #"Repair Cost Estimate", {"Id"}, "Repair Cost Estimate", JoinKind.LeftOuter),
+				    #"Expanded Repair Cost Estimate" = Table.ExpandTableColumn(#"Merged Queries", "Repair Cost Estimate", {"RepairCostEstimateValue"}, {"RepairCostEstimateValue"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Expanded Repair Cost Estimate",{{"RepairCostEstimateValue", "Estimated Repair Amount"}, {"AlertOdomotor", "AlertOdometor"}}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Renamed Columns", "CreatedDateTimeUtc", "CreatedDateTimeUtc - Copy"),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Duplicated Column",{{"CreatedDateTimeUtc - Copy", "Create Date"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns1",{{"Create Date", type date}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

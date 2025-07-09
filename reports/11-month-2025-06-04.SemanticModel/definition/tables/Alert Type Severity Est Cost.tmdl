@@ -1,0 +1,54 @@
+table 'Alert Type Severity Est Cost'
+	lineageTag: 97420dac-954e-447f-a1c4-d7617d0837cc
+
+	column AlertTypeId
+		dataType: int64
+		formatString: 0
+		lineageTag: 44e7f387-ad66-4c3a-8d81-27e74ecef1a7
+		summarizeBy: none
+		sourceColumn: AlertTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertSeverityId
+		dataType: int64
+		formatString: 0
+		lineageTag: 21400aef-23dd-4ca3-beca-491939b69c9d
+		summarizeBy: none
+		sourceColumn: AlertSeverityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Alert Count'
+		dataType: int64
+		formatString: 0
+		lineageTag: 18d228a9-01ad-40b8-8c11-be2fa4c977fb
+		summarizeBy: sum
+		sourceColumn: Alert Count
+
+		annotation SummarizationSetBy = Automatic
+
+	column RepairCostEstimateValue
+		dataType: double
+		lineageTag: a2f1df82-a63b-481f-8bc2-54eef21e2579
+		summarizeBy: sum
+		sourceColumn: RepairCostEstimateValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Alert Type Severity Est Cost' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("."),
+				    fld_rs = Source{[Name="fld_rs"]}[Data],
+				    dbo_vw_alert_type_severity_est_cost = fld_rs{[Schema="dbo",Item="vw_alert_type_severity_est_cost"]}[Data]
+				in
+				    dbo_vw_alert_type_severity_est_cost
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

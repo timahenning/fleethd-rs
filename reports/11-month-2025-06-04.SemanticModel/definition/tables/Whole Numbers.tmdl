@@ -1,0 +1,20 @@
+table 'Whole Numbers'
+	lineageTag: 79787d9b-9e34-45da-a153-3ed317795e35
+
+	column Value
+		formatString: 0
+		lineageTag: cb2906e1-8512-4647-84e5-d9be47325041
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Whole Numbers' = calculated
+		mode: import
+		source = ```
+				GENERATESERIES(1, 10) 
+				```
+
+	annotation PBI_Id = c434eb8e2fbb45e4a58269210970c537
+

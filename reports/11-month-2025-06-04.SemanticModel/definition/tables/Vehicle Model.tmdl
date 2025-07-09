@@ -1,0 +1,35 @@
+table 'Vehicle Model'
+	lineageTag: 3b4a204c-33d1-4993-a92d-6b590fc417f8
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 45569e42-d8a4-4285-9343-2c3611c6d3b5
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Model
+		dataType: string
+		lineageTag: 3582caf3-41c5-4542-af14-2d922d565e52
+		summarizeBy: none
+		sourceColumn: Model
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Vehicle Model' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("."),
+				    fld_rs = Source{[Name="fld_rs"]}[Data],
+				    dbo_VehicleModel = fld_rs{[Schema="dbo",Item="VehicleModel"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(dbo_VehicleModel,{{"VehicleModelDescription", "Model"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

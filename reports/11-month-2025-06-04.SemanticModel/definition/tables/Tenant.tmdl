@@ -1,0 +1,34 @@
+table Tenant
+	lineageTag: 6f122d10-f836-4dd4-b800-781c581193aa
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7994681d-5911-476a-ab26-11a50e09f273
+		summarizeBy: count
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column TenantDescription
+		dataType: string
+		lineageTag: 2b85bbf8-cdc4-473c-a3ba-66da0e4d3aaa
+		summarizeBy: none
+		sourceColumn: TenantDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Tenant = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("."),
+				    fld_rs = Source{[Name="fld_rs"]}[Data],
+				    dbo_Tenant = fld_rs{[Schema="dbo",Item="Tenant"]}[Data]
+				in
+				    dbo_Tenant
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

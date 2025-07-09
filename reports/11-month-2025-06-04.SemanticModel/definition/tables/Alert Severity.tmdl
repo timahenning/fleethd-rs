@@ -1,0 +1,53 @@
+table 'Alert Severity'
+	lineageTag: dd550832-a06a-4418-8316-d15ec5045e7d
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 51afc7e3-cbb3-4f51-95a7-665547701eb4
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Severity
+		dataType: string
+		lineageTag: 3ca3c327-d890-4b1e-b2a0-4bfc783691dc
+		summarizeBy: none
+		sourceColumn: Severity
+		sortByColumn: Sorting
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sorting
+		dataType: int64
+		formatString: 0
+		lineageTag: 8dc63e40-9902-439a-ba92-45e23cbc3407
+		summarizeBy: sum
+		sourceColumn: Sorting
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Alert Severity' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("."),
+				    fld_rs = Source{[Name="fld_rs"]}[Data],
+				    dbo_AlertSeverity = fld_rs{[Schema="dbo",Item="AlertSeverity"]}[Data],
+				    #"Replaced Value" = Table.ReplaceValue(dbo_AlertSeverity,"Severity","",Replacer.ReplaceText,{"AlertSeverityDescription"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Replaced Value",{{"AlertSeverityDescription", "Severity"}}),
+				    #"Added Custom" = Table.AddColumn(#"Renamed Columns", "Sorting", each if [Severity] = "Critical" then 0
+				else if [Severity] = "High" then 1
+				else if [Severity] = "Medium" then 2
+				else if [Severity] = "Low" then 3
+				else 4, Int16.Type)
+				in
+				    #"Added Custom"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

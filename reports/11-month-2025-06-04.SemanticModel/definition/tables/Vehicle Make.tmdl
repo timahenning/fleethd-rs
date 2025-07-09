@@ -1,0 +1,35 @@
+table 'Vehicle Make'
+	lineageTag: 38db69eb-77b0-49c4-89c2-c636d39ad96f
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 94f84d54-0d21-4a0c-901f-438d3e9f7358
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Make
+		dataType: string
+		lineageTag: 6cf3988a-ec59-4b23-981a-c23b0f02190d
+		summarizeBy: none
+		sourceColumn: Make
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Vehicle Make' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("."),
+				    fld_rs = Source{[Name="fld_rs"]}[Data],
+				    dbo_VehicleMake = fld_rs{[Schema="dbo",Item="VehicleMake"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(dbo_VehicleMake,{{"VehicleMakeDescription", "Make"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

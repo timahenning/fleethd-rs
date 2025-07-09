@@ -1,0 +1,133 @@
+table 'Vehicle Sequence Duration Between New Alerts'
+	lineageTag: a77c7a48-6bc4-4f8d-9a68-42255903010a
+
+	column VehicleId
+		dataType: int64
+		formatString: 0
+		lineageTag: 6652a2b2-64eb-4965-ac92-dde38332750a
+		summarizeBy: none
+		sourceColumn: VehicleId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDateTimeUtc
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 177fc7fc-e77f-4fd2-bd3f-fbcacdcd1656
+		summarizeBy: none
+		sourceColumn: CreatedDateTimeUtc
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertTypeId
+		dataType: int64
+		formatString: 0
+		lineageTag: 20cc6c35-b6d7-4acf-bf1b-f15f15d3673d
+		summarizeBy: none
+		sourceColumn: AlertTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertSeverityId
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a47a8d9-fea8-4368-8a99-35989942bea9
+		summarizeBy: none
+		sourceColumn: AlertSeverityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrevAlertTypeCreatedDateTimeUtc
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 99f31cf6-dac6-4472-b875-72eb54f5f4af
+		summarizeBy: none
+		sourceColumn: PrevAlertTypeCreatedDateTimeUtc
+
+		annotation SummarizationSetBy = Automatic
+
+	column SameAlertSequenceDays
+		dataType: int64
+		formatString: 0
+		lineageTag: 7bed2a47-4592-4d8e-8365-3db740b311da
+		summarizeBy: none
+		sourceColumn: SameAlertSequenceDays
+
+		annotation SummarizationSetBy = Automatic
+
+	column SameAlertSequenceHour
+		dataType: int64
+		formatString: 0
+		lineageTag: cb8cec70-2bfe-4421-b66c-65fc632f47a1
+		summarizeBy: none
+		sourceColumn: SameAlertSequenceHour
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6e19ca9f-8006-4991-9d27-c238d03f24c4
+		summarizeBy: none
+		sourceColumn: Created Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column AlertOdomotor
+		dataType: double
+		lineageTag: bc51e26a-f30c-4b93-ba75-2539b96a2407
+		summarizeBy: none
+		sourceColumn: AlertOdomotor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrevAlertTypeOdometer
+		dataType: double
+		lineageTag: 368cf2a5-bd74-40b0-8ddd-7007b04125a6
+		summarizeBy: none
+		sourceColumn: PrevAlertTypeOdometer
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AlertResetCount
+		dataType: int64
+		formatString: 0
+		lineageTag: c3316994-217c-46b4-b2c4-265bb971f390
+		summarizeBy: none
+		sourceColumn: AlertResetCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column MilesBetweenAlertType
+		dataType: double
+		lineageTag: 4b464037-ee34-46b1-881a-3cff823676d9
+		summarizeBy: none
+		sourceColumn: MilesBetweenAlertType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Vehicle Sequence Duration Between New Alerts' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("."),
+				    fld_rs = Source{[Name="fld_rs"]}[Data],
+				    dbo_vw_vehicle_duration_between_new_alerts = fld_rs{[Schema="dbo",Item="vw_vehicle_duration_between_new_alerts"]}[Data],
+				    #"Duplicated Column" = Table.DuplicateColumn(dbo_vw_vehicle_duration_between_new_alerts, "CreatedDateTimeUtc", "CreatedDateTimeUtc - Copy"),
+				    #"Renamed Columns" = Table.RenameColumns(#"Duplicated Column",{{"CreatedDateTimeUtc - Copy", "Created Date"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Created Date", type date}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

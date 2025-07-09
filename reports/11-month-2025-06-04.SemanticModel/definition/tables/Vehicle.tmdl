@@ -1,0 +1,212 @@
+table Vehicle
+	lineageTag: e1bc9e28-e1db-49f0-91fa-de17da13f67a
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c2421d2-6cda-4ddb-8901-0d363e7c0aa8
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column VIN
+		dataType: string
+		lineageTag: 1a47c2cc-b442-489c-ad50-bc804f1524c3
+		summarizeBy: none
+		sourceColumn: VIN
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vehicle Name'
+		dataType: string
+		lineageTag: 396a2fa3-526c-4e73-8a07-93202dcfb9b2
+		summarizeBy: none
+		sourceColumn: Vehicle Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Model Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: e0bbc94b-f82b-4171-a41c-de75da05b016
+		summarizeBy: none
+		sourceColumn: Model Year
+
+		annotation SummarizationSetBy = User
+
+	column 'Engine Model'
+		dataType: string
+		lineageTag: c67bb161-2054-45a5-a383-902ed775c61d
+		summarizeBy: none
+		sourceColumn: Engine Model
+
+		annotation SummarizationSetBy = Automatic
+
+	column Make
+		dataType: string
+		lineageTag: 1d3f0c2e-1c64-4118-9c16-6f4e449ea2f7
+		summarizeBy: none
+		sourceColumn: Make
+
+		annotation SummarizationSetBy = Automatic
+
+	column Odometer
+		dataType: double
+		lineageTag: 49ce6b5f-1554-436b-8554-3cf2a1cf9151
+		summarizeBy: sum
+		sourceColumn: Odometer
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VehicleLocationId
+		dataType: int64
+		formatString: 0
+		lineageTag: f6c38dd6-16a1-42f6-ba74-10f900143165
+		summarizeBy: none
+		sourceColumn: VehicleLocationId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: int64
+		lineageTag: 8133e74a-b192-4b6d-988e-39496fd3a9bf
+		summarizeBy: none
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"Vehicle","TableItemName":"Age (bins)","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column TenantId
+		dataType: int64
+		formatString: 0
+		lineageTag: 71da59b0-3d9f-4f72-b17c-98f56b81dff0
+		summarizeBy: none
+		sourceColumn: TenantId
+
+		annotation SummarizationSetBy = User
+
+	column VehicleMakeId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9bea7123-6b44-475e-9943-07cae2ef8874
+		summarizeBy: none
+		sourceColumn: VehicleMakeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column VehicleModelId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ce8693e-54ae-45c0-91aa-174e296cd823
+		summarizeBy: none
+		sourceColumn: VehicleModelId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrentLatitude
+		dataType: double
+		lineageTag: f40b055b-ea0c-4f63-9111-cf4bcb9b0b79
+		summarizeBy: sum
+		sourceColumn: CurrentLatitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CurrentLongitude
+		dataType: double
+		lineageTag: e3c57c40-29cc-4a77-a266-36fe55d89e07
+		summarizeBy: sum
+		sourceColumn: CurrentLongitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Age (bins)' =
+			VAR __Count = 11
+			
+			VAR __Min = MIN('Vehicle'[Age])
+			
+			VAR __Max = MAX('Vehicle'[Age])
+			
+			VAR __Difference = (__Max - __Min)
+			
+			VAR __Size = IF(__Difference > 0, __Difference / __Count, 1)
+			
+			VAR __BinNumber = INT(('Vehicle'[Age] - __Min) / __Size)
+			
+			RETURN
+				IF(
+					ISBLANK('Vehicle'[Age]),
+					BLANK(),
+					__Min + (MIN(__BinNumber, __Count - 1) * __Size)
+				)
+		lineageTag: b2bd0376-f148-4b2b-9c19-b1cd31c7f847
+		summarizeBy: none
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "Vehicle"
+				          }
+				        },
+				        "Property": "Age"
+				      }
+				    }
+				  ]
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"v","Entity":"Vehicle"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"Age"}}],"BinItem":{"Expression":{"Member":{"Expression":{"Discretize":{"Expression":{"Column":{"Expression":{"SourceRef":{"Source":"v"}},"Property":"Age"}},"Count":11}},"Member":"Min"}}}}
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Miles
+		dataType: double
+		lineageTag: 85ee48ee-06f8-4997-bbf3-8abd56077900
+		summarizeBy: sum
+		sourceColumn: Miles
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Age Bin Rounded' = MROUND([Age (bins)], 2)
+		formatString: 0
+		lineageTag: ce05348d-a23b-441f-b6fc-f0aba21a39e4
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Vehicle = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("."),
+				    fld_rs = Source{[Name="fld_rs"]}[Data],
+				    dbo_Vehicle = fld_rs{[Schema="dbo",Item="vw_vehicle"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(dbo_Vehicle,{{"Vin", "VIN"}, {"VehicleName", "Vehicle Name"}, {"ModelYear", "Model Year"}, {"EngineModel", "Engine Model"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Model Year", Int64.Type}}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Changed Type", "Age", each Date.Year(DateTime.LocalNow()) - [Model Year], Int16.Type),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Added Conditional Column",{{"CurrentOdometer", "Odometer"}, {"EngineManufacturer", "Make"}, {"Current Odometer In Miles", "Miles"}})
+				
+				in
+				    #"Renamed Columns1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

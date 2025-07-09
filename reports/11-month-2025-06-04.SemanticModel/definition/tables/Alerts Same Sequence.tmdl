@@ -1,0 +1,305 @@
+table 'Alerts Same Sequence'
+	lineageTag: decb2b93-c0b9-465f-9611-964c63b30a87
+
+	column WEEKDAY
+		dataType: int64
+		formatString: 0
+		lineageTag: 6bdd9e29-1571-4d43-a9d6-720a58bee4fa
+		summarizeBy: none
+		sourceColumn: WEEKDAY
+
+		annotation SummarizationSetBy = Automatic
+
+	column DAY
+		dataType: string
+		lineageTag: b4129788-e677-4f2e-ba0f-cadaed3f85c6
+		summarizeBy: none
+		sourceColumn: DAY
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 4fe05509-79dd-46a2-9108-2c196581d693
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column VehicleId
+		dataType: int64
+		formatString: 0
+		lineageTag: 47b913db-9f45-41e2-bb82-4c14822c1dee
+		summarizeBy: none
+		sourceColumn: VehicleId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDateTimeUtc
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2eb8f433-2c17-42c5-9c28-f8bd8e437d39
+		summarizeBy: none
+		sourceColumn: CreatedDateTimeUtc
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertTypeId
+		dataType: int64
+		formatString: 0
+		lineageTag: ea3980ea-38d5-4a9c-b705-1f4f2f5bc660
+		summarizeBy: none
+		sourceColumn: AlertTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertSeverityId
+		dataType: int64
+		formatString: 0
+		lineageTag: 27080cf2-bf08-489f-b77c-0d3287636ccf
+		summarizeBy: none
+		sourceColumn: AlertSeverityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertOdomotor
+		dataType: double
+		formatString: 0
+		lineageTag: f2060e87-2d91-40a0-b1c4-129966392b97
+		summarizeBy: none
+		sourceColumn: AlertOdomotor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitude
+		dataType: double
+		lineageTag: 65581083-eca9-40cd-be63-87112556583b
+		summarizeBy: none
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Longitude
+		dataType: double
+		lineageTag: c9bc12c8-4479-4c06-b7db-7d6b956dc1fb
+		summarizeBy: none
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RepairCostEstimateId
+		dataType: int64
+		formatString: 0
+		lineageTag: dde410dc-9b64-4ad7-ae0e-0f4aa6bacc8a
+		summarizeBy: none
+		sourceColumn: RepairCostEstimateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TriggeredFaultFmi
+		dataType: int64
+		formatString: 0
+		lineageTag: df9c1313-4acc-4155-897a-d4a0fdf701e9
+		summarizeBy: none
+		sourceColumn: TriggeredFaultFmi
+
+		annotation SummarizationSetBy = Automatic
+
+	column TriggeredFaultSpn
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b688945-f236-47b2-bc80-a61e15ff9a04
+		summarizeBy: none
+		sourceColumn: TriggeredFaultSpn
+
+		annotation SummarizationSetBy = Automatic
+
+	column TriggeredFaultSource
+		dataType: int64
+		formatString: 0
+		lineageTag: 2051d6fb-5e3c-43f2-9a27-002075b85670
+		summarizeBy: none
+		sourceColumn: TriggeredFaultSource
+
+		annotation SummarizationSetBy = Automatic
+
+	column TriggeredFaultCount
+		dataType: int64
+		formatString: 0
+		lineageTag: 95a9b2be-e169-471f-bece-40354a75a906
+		summarizeBy: none
+		sourceColumn: TriggeredFaultCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertType
+		dataType: string
+		lineageTag: b005734e-b5f9-46be-bac0-50615562d0a0
+		summarizeBy: none
+		sourceColumn: AlertType
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertSeverity
+		dataType: string
+		lineageTag: ac8da695-811a-4bbd-ae1f-0ba04bbb6816
+		summarizeBy: none
+		sourceColumn: AlertSeverity
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrevAlertCreatedDateTimeUtc
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d56209d5-1abb-457b-a906-bd5a13b83f73
+		summarizeBy: none
+		sourceColumn: PrevAlertCreatedDateTimeUtc
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrevAlertTypeCreatedDateTimeUtc
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 677399da-88d5-4373-b5fa-bc1fa51f570f
+		summarizeBy: none
+		sourceColumn: PrevAlertTypeCreatedDateTimeUtc
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrevAlertOdometer
+		dataType: double
+		lineageTag: d144ca47-8aff-43fe-85b9-698d08d93866
+		summarizeBy: none
+		sourceColumn: PrevAlertOdometer
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrevAlertTypeOdometer
+		dataType: double
+		lineageTag: 8144998d-163a-4ff9-aa4b-a65dabd4d3dd
+		summarizeBy: none
+		sourceColumn: PrevAlertTypeOdometer
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MilesBetweenAlerts
+		dataType: double
+		lineageTag: 17df7912-836e-4987-943b-f4997bc086f9
+		summarizeBy: none
+		sourceColumn: MilesBetweenAlerts
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MilesBetweenAlertType
+		dataType: double
+		lineageTag: a5cb7fc7-5d17-4c33-9da9-b9f33d3d82db
+		summarizeBy: none
+		sourceColumn: MilesBetweenAlertType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DaysDifference
+		dataType: int64
+		formatString: 0
+		lineageTag: a1845452-723a-418e-949e-0aab76e99e2e
+		summarizeBy: none
+		sourceColumn: DaysDifference
+
+		annotation SummarizationSetBy = Automatic
+
+	column HourDifference
+		dataType: int64
+		formatString: 0
+		lineageTag: 4881c496-826c-4664-a801-83ed3c85a313
+		summarizeBy: none
+		sourceColumn: HourDifference
+
+		annotation SummarizationSetBy = Automatic
+
+	column TriggerNewAlertHours
+		dataType: int64
+		formatString: 0
+		lineageTag: f970a54e-6fd1-492b-9836-f236032abf64
+		summarizeBy: none
+		sourceColumn: TriggerNewAlertHours
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Average Vehicle Route Miles'
+		dataType: double
+		lineageTag: 4c7f74d7-eabd-41bf-83bb-a4c85f19f641
+		summarizeBy: none
+		sourceColumn: Average Vehicle Route Miles
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SameAlertSequence
+		dataType: int64
+		formatString: 0
+		lineageTag: 48d149da-589f-4146-86fd-6ce74179d0d7
+		summarizeBy: none
+		sourceColumn: SameAlertSequence
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Created Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 08d6b8b8-79e9-4327-a7d3-683f9cce2d06
+		summarizeBy: none
+		sourceColumn: Created Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column PrevTriggeredFaultCount
+		dataType: int64
+		formatString: 0
+		lineageTag: 074bb155-4aa4-4a36-85ea-95e19637558c
+		summarizeBy: none
+		sourceColumn: PrevTriggeredFaultCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertReset
+		dataType: int64
+		formatString: 0
+		lineageTag: 9f700821-9a2d-44f0-b90c-84262da62ec3
+		summarizeBy: none
+		sourceColumn: AlertReset
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Alerts Same Sequence' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("."),
+				    fld_rs = Source{[Name="fld_rs"]}[Data],
+				    dbo_vw_alerts_same_sequence = fld_rs{[Schema="dbo",Item="vw_alerts_same_sequence"]}[Data],
+				    #"Duplicated Column" = Table.DuplicateColumn(dbo_vw_alerts_same_sequence, "CreatedDateTimeUtc", "CreatedDateTimeUtc - Copy"),
+				    #"Renamed Columns" = Table.RenameColumns(#"Duplicated Column",{{"CreatedDateTimeUtc - Copy", "Created Date"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Created Date", type date}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

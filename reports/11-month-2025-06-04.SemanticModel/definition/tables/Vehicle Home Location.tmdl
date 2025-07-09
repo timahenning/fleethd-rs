@@ -1,0 +1,35 @@
+table 'Vehicle Home Location'
+	lineageTag: 52aae857-b82d-49a4-bd40-570fab686266
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 4cd4198c-fb4a-4cd5-a942-b78dc40aa6b6
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location
+		dataType: string
+		lineageTag: 0c96fae3-71d9-4dda-bd76-f72f48be900e
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Vehicle Home Location' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("."),
+				    fld_rs = Source{[Name="fld_rs"]}[Data],
+				    dbo_VehicleLocation = fld_rs{[Schema="dbo",Item="VehicleLocation"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(dbo_VehicleLocation,{{"VehicleLocationDescription", "Location"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

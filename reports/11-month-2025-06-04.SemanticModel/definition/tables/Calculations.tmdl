@@ -1,0 +1,327 @@
+table Calculations
+	lineageTag: fcf09bff-1169-45a9-8e2f-c2da471fb499
+
+	measure 'Alert Countrows' = ```
+			COUNTROWS('Alert') 
+			```
+		formatString: #,0
+		displayFolder: Alert
+		lineageTag: b4151901-6000-4de9-aab1-d4fb094c592d
+
+	measure 'Alert Fault Countrows' = COUNTROWS('Alert Fault')
+		formatString: #,0
+		displayFolder: Faults
+		lineageTag: 54f93045-4d9d-4721-a205-9d9bb6c468cf
+
+	measure 'Fault to Alert %' = ```
+			DIVIDE([Alert Countrows],[Alert Fault Countrows]) 
+			```
+		formatString: 0%;-0%;0%
+		lineageTag: 6265978e-87d7-43c1-ab54-c89472810802
+
+	measure 'Vehicle Countrows' = ```
+			COUNTROWS('Vehicle') 
+			```
+		formatString: #,0
+		displayFolder: Vehicle
+		lineageTag: f24c0686-d184-49e1-a52b-f8e69d28070f
+
+	measure 'Vehicle Count Allselected' = ```
+			
+			    CALCULATE(
+			        [Vehicle Countrows]
+			        ,ALLSELECTED('Vehicle')
+			    )
+			```
+		formatString: 0
+		displayFolder: Vehicle
+		lineageTag: 5db21fd4-fedc-40c8-9941-2a2c083e5462
+
+	measure '% Total Selected Fleet' = DIVIDE([Vehicle Countrows], [Vehicle Count Allselected])
+		formatString: 0%;-0%;0%
+		displayFolder: Vehicle
+		lineageTag: cbd592bc-7ff1-43ff-a1e2-55b4e78599dc
+
+	measure 'Alerts by Vechicle' = ```
+			DIVIDE([Vehicle Countrows], [Alert Countrows]) 
+			```
+		lineageTag: fdacd047-792c-4665-86d0-2316ab7a3f95
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Vehicle Count %' = ```
+			
+			    VAR _ALL = CALCULATE([Vehicle Countrows], ALLSELECTED())
+			    RETURN DIVIDE([Vehicle Countrows], _ALL)
+			
+			
+			```
+		formatString: 0%;-0%;0%
+		displayFolder: Vehicle
+		lineageTag: b1a3b329-f12b-4359-b703-cdc4bbfa5340
+
+	measure 'Alerts % of Total' = ```
+			
+			    VAR _SELECTED_ALERTS = [Alert Countrows]
+			
+			    RETURN DIVIDE(_SELECTED_ALERTS, [All Alert Countrows])
+			```
+		formatString: 0%;-0%;0%
+		displayFolder: Alert
+		lineageTag: 238f7dff-8897-4a67-9b49-bc705faf46ae
+
+	measure 'All Alert Countrows' = CALCULATE([Alert Countrows], ALL())
+		formatString: 0
+		lineageTag: 1fa3856c-2a9f-4a4b-b3cf-cd38394671a7
+
+	measure 'Vehicle Count of Age Bin' = ```
+			COUNT('Vehicle'[Age (bins)]) 
+			```
+		formatString: #,0
+		displayFolder: Vehicle
+		lineageTag: b2dec5bd-eefc-475c-a116-9f34ca7fa886
+
+	measure 'Alert Count of Days Difference Bins' = COUNT('Alert'[DaysDifference (bins)] )
+		formatString: #,0
+		displayFolder: Alert
+		lineageTag: 1ba9f60e-38b9-48c6-8a94-c491bb9a10ce
+
+	measure 'Miles Driven Between Alerts Count of Bin' = ```
+			COUNT(Alert[MilesBetweenAlerts (bins)]) 
+			```
+		formatString: #,0
+		displayFolder: Alert
+		lineageTag: ac8ee1de-facc-46e2-a6ed-f97dd4ad2d7a
+
+	measure 'Alert Severity Countrows' = CALCULATE(COUNTROWS('Alert Severity'), ALL())
+		formatString: 0
+		displayFolder: Alert
+		lineageTag: aa298a89-d805-43d5-8868-ae16632b31cb
+
+	measure 'Alert Severity Count' = ```
+			COUNT(Alert[AlertSeverityId]) 
+			```
+		formatString: 0
+		displayFolder: Alert
+		lineageTag: 8de62d09-9b14-43b7-941d-6fdaba3d5319
+
+	measure 'Alert Fault Avg by Week' = ```
+			
+			    VAR _T = 
+			            SUMMARIZE(
+			                'Alert Fault'
+			                ,Dates[Week of Year]
+			                ,Dates[Year]
+			                ,"@COUNT", [Alert Fault Countrows]
+			            )
+			        
+			    RETURN AVERAGEX(_T, [@COUNT])
+			```
+		displayFolder: Faults
+		lineageTag: 044f7175-a9c4-45b5-baaa-7ea5a5592400
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Alert Fault Avg by Week Allselected' = ```
+			
+			    CALCULATE(
+			        [Alert Fault Avg by Week]
+			        ,ALLSELECTED(Dates)
+			    )
+			```
+		displayFolder: Faults
+		lineageTag: d8f1d558-e06e-438e-93cb-c1e2c3352254
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Alert Fault Average' = ```
+			
+			    AVERAGEX(
+			        CALCULATETABLE(
+			            SUMMARIZE(
+			                'Alert Fault'
+			                ,Vehicle[Engine Model]
+			                ,"@COUNT", [Alert Countrows]
+			            )
+			            ,ALLSELECTED(Vehicle[Model Year])
+			        )
+			        ,[@COUNT]
+			    )
+			
+			```
+		displayFolder: Faults
+		lineageTag: f8b65392-3254-41d7-9c73-f68a793d592d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Alert Fault Median Allselected' = ```
+			
+			        VAR _T = 
+			        CALCULATETABLE(
+			            SUMMARIZE(
+			                'Alert Fault'
+			                ,Dates[Week of Year]
+			                ,"@COUNT", [Alert Fault Countrows]
+			            )
+			            ,ALLSELECTED(Dates)
+			        )
+			        RETURN MEDIANX(_T, [@COUNT])
+			        
+			```
+		displayFolder: Faults
+		lineageTag: 14ff6ed0-2ca7-4d00-b951-725deb835256
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Alert Faults Per Vehicle' = ```
+			DIVIDE([Alert Fault Countrows], [Vehicle Countrows])
+			
+			```
+		formatString: 0
+		displayFolder: Faults
+		lineageTag: fdd96d10-5a12-438e-ba02-03ff608f6de6
+
+	measure 'Vehicle Count Allselected Make' = ```
+			
+			    CALCULATE(
+			        [Vehicle Countrows]
+			        ,ALLSELECTED('Vehicle Model')
+			    )
+			```
+		formatString: 0
+		displayFolder: Vehicle
+		lineageTag: c95f27f0-2025-4aed-82ca-ed005c2078d2
+
+	measure 'Alert Faults Per Vehicle Make' = ```
+			DIVIDE([Alert Fault Countrows], [Vehicle Count Allselected Make])
+			
+			```
+		formatString: 0.00
+		displayFolder: Faults
+		lineageTag: b40d04a7-dfc3-46e4-9f5f-1e28d6ca1f03
+
+	measure 'Vehicle Max Age' = MAX('Vehicle'[Age])
+		formatString: 0
+		displayFolder: Vehicle
+		lineageTag: ac992845-3d83-4236-9b1b-17048c067e31
+
+	measure 'Vehicle Average Age' = Average('Vehicle'[Age])
+		formatString: 0
+		displayFolder: Vehicle
+		lineageTag: 6eb0af77-73ed-45e3-9694-8141a0c857d2
+
+	measure 'Vehicle Miles Average' = AVERAGE('Vehicle'[Miles])
+		displayFolder: Vehicle
+		lineageTag: 8a90fce6-6f7f-4982-9996-03fa64e7b051
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Selected Make' = ```
+			SELECTEDVALUE('Vehicle Make'[Make]) 
+			```
+		lineageTag: 1aeb4c1a-3d92-4245-8deb-beb9888e908c
+
+	measure 'Selected Model' = ```
+			SELECTEDVALUE('Vehicle Model'[Model]) 
+			```
+		lineageTag: f20af36c-e804-44ad-b61c-fe355179eb2b
+
+	measure 'Alert Count Sum Estimate' = ```
+			SUM('Alert Type Severity Est Cost'[RepairCostEstimateValue]) 
+			```
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		displayFolder: Alert
+		lineageTag: 64278b60-55ab-4653-ab77-8dab0c9ee3f4
+
+	measure 'Total Estimate' = ```
+			
+			    VAR _SELECTED_PERCENT = SELECTEDVALUE('Whole Numbers'[Value]) * .01
+			    VAR _ALERT_SEVERITY = SELECTEDVALUE('Alert Severity'[Id])
+			    VAR _ALERT_TYPE = SELECTEDVALUE('Alert Type'[Id])
+			    VAR _ALERT_COUNT = 
+			            CALCULATE(
+			                SUM('Alert Type Severity Est Cost'[Alert Count])
+			                ,'Alert Severity'[Id] = _ALERT_SEVERITY
+			                ,'Alert Type'[Id] = _ALERT_TYPE
+			            )
+			
+			    VAR _ALERT_COUNT_PER = MAX('Alert Type Severity Est Cost'[Alert Count]) * _SELECTED_PERCENT
+			    VAR _REPAIR_COST = _ALERT_COUNT_PER * MAX('Alert Type Severity Est Cost'[RepairCostEstimateValue])
+			    
+			    RETURN _ALERT_COUNT
+			```
+		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Alert
+		lineageTag: 83c40c2d-f11d-487e-b77a-e3fa6b2bc15d
+
+	measure Probability = SELECTEDVALUE('Whole Numbers'[Value]) * .001
+		formatString: 0%;-0%;0%
+		lineageTag: d3153d73-fd4f-47b4-afc2-1b10f0e1a7c1
+
+	measure 'Sequence Duration Between New Alerts Count' = ```
+			COUNTROWS('Vehicle Sequence Duration Between New Alerts') 
+			```
+		formatString: 0
+		lineageTag: bdfe0dc1-638b-42f3-b99a-a8ea90e2367a
+
+	measure 'Alert Type Refined Count Rows' = ```
+			COUNTROWS('Alert Refined Count') 
+			```
+		formatString: #,0
+		displayFolder: Alert
+		lineageTag: 690aa2c6-d324-4a3e-9ead-e9fa13bc2491
+
+	measure 'AlertResetCount Min' = ```
+			MIN('Vehicle Sequence Duration Between New Alerts'[AlertResetCount]) 
+			```
+		formatString: 0
+		lineageTag: 2d8b1647-02b0-4ccb-b54f-b657ae7d8936
+
+	measure 'Miles Driven Between Alerts' = ```
+			
+			    VAR _RESULT = SUM(Alert[MilesBetweenAlerts])
+			
+			    RETURN 
+			        IF (_RESULT > -1, _RESULT, 0)
+			```
+		formatString: #,0
+		displayFolder: Alert
+		lineageTag: 17d835f9-0115-4643-a812-30a38ccdc224
+
+	measure 'Days Between Alerts' = SUM('Alert'[DaysDifference])
+		formatString: #,0
+		displayFolder: Alert
+		lineageTag: 66ad45ed-8492-40a6-9b4b-7ccf79a0de3c
+
+	measure 'Alert Sequence Count' = ```
+			SUM('Alert Refined Count'[AlertTotalCount]) 
+			```
+		formatString: 0
+		displayFolder: Alert
+		lineageTag: 8bd237bc-0340-44d2-84d3-e8897288a2ec
+
+	measure 'Raw Alert to Sequence Count %' = ```
+			DIVIDE([Alert Sequence Count],[Alert Countrows]) 
+			```
+		formatString: 0%;-0%;0%
+		displayFolder: Alert
+		lineageTag: 8642ee29-765a-42b6-8439-71df353188ab
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: c871d42b-46b6-4537-bd6f-432ceb4eec90
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calculations = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = c4d201a980fb4a5c9b4b3580513c2f9b
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

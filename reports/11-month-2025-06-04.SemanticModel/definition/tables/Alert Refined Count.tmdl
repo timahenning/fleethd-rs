@@ -1,0 +1,44 @@
+table 'Alert Refined Count'
+	lineageTag: a6abdffc-46e4-4ffa-8e93-de3aa48647e5
+
+	column VehicleId
+		dataType: int64
+		formatString: 0
+		lineageTag: cee4ad4b-9fce-4444-9181-da383cb8aeff
+		summarizeBy: none
+		sourceColumn: VehicleId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertTypeId
+		dataType: int64
+		formatString: 0
+		lineageTag: e66906f7-720f-47d0-80cd-2ea6d6c657b6
+		summarizeBy: none
+		sourceColumn: AlertTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertTotalCount
+		dataType: int64
+		formatString: #,0
+		lineageTag: 7895b755-7984-492e-873b-71cfdcdf16f3
+		summarizeBy: sum
+		sourceColumn: AlertTotalCount
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Alert Refined Count' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("."),
+				    fld_rs = Source{[Name="fld_rs"]}[Data],
+				    dbo_vw_alert_refined_count = fld_rs{[Schema="dbo",Item="vw_alert_refined_count"]}[Data]
+				in
+				    dbo_vw_alert_refined_count
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,36 @@
+table 'Alert Type'
+	lineageTag: c00b9143-8be7-455f-bf55-cec0f579057c
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 31110752-afc2-489b-8f98-a83b9353e037
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Alert Type'
+		dataType: string
+		lineageTag: 8ccb0300-a724-4ac8-a91a-5f121675fe07
+		summarizeBy: none
+		sourceColumn: Alert Type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Alert Type' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("."),
+				    fld_rs = Source{[Name="fld_rs"]}[Data],
+				    dbo_AlertType = fld_rs{[Schema="dbo",Item="AlertType"]}[Data],
+				    #"Replaced Value" = Table.ReplaceValue(dbo_AlertType,"Vehicle Alert - ","",Replacer.ReplaceText,{"AlertTypeDescription"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Replaced Value",{{"AlertTypeDescription", "Alert Type"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

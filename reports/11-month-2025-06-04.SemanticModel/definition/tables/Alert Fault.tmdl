@@ -1,0 +1,111 @@
+table 'Alert Fault'
+	lineageTag: 4c4a56f1-a749-4219-a592-b620f476f36f
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 020aea5e-7c71-449a-bd6a-234201fe7352
+		summarizeBy: count
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertId
+		dataType: int64
+		formatString: 0
+		lineageTag: 0cf6c4dd-ba4a-47a0-974d-e9bdea4369cb
+		summarizeBy: none
+		sourceColumn: AlertId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Spn
+		dataType: int64
+		formatString: 0
+		lineageTag: d538f8bc-5070-4a34-a961-0589c470e3bc
+		summarizeBy: sum
+		sourceColumn: Spn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fmi
+		dataType: int64
+		formatString: 0
+		lineageTag: 8063af28-2577-4a43-b7b6-673cc39859c0
+		summarizeBy: sum
+		sourceColumn: Fmi
+
+		annotation SummarizationSetBy = Automatic
+
+	column FaultDateUtc
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0b3a684f-52ad-484d-8435-024d7c2819bd
+		summarizeBy: none
+		sourceColumn: FaultDateUtc
+
+		annotation SummarizationSetBy = Automatic
+
+	column Protocol
+		dataType: string
+		lineageTag: 08564195-26e5-431b-99db-942421637d3d
+		summarizeBy: none
+		sourceColumn: Protocol
+
+		annotation SummarizationSetBy = Automatic
+
+	column FaultCount
+		dataType: int64
+		formatString: 0
+		lineageTag: b92bf1fc-2979-42f8-aa1a-9e41b65e3a1b
+		summarizeBy: sum
+		sourceColumn: FaultCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column SourceAddress
+		dataType: int64
+		formatString: 0
+		lineageTag: 10df012d-f74c-4f01-b314-d8e26e790f7e
+		summarizeBy: sum
+		sourceColumn: SourceAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column TriggeredAlert
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0f151868-00ab-492a-98b8-27c42a374086
+		summarizeBy: none
+		sourceColumn: TriggeredAlert
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fault Date'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: da47ef63-690b-43cb-ab69-c4b3632fdc9a
+		summarizeBy: none
+		sourceColumn: Fault Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'Alert Fault' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("."),
+				    fld_rs = Source{[Name="fld_rs"]}[Data],
+				    dbo_AlertFault = fld_rs{[Schema="dbo",Item="AlertFault"]}[Data],
+				    #"Duplicated Column" = Table.DuplicateColumn(dbo_AlertFault, "FaultDateUtc", "FaultDateUtc - Copy"),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Duplicated Column",{{"FaultDateUtc - Copy", type date}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"FaultDateUtc - Copy", "Fault Date"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

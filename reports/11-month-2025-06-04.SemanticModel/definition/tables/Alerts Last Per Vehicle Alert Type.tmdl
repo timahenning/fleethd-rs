@@ -1,0 +1,150 @@
+table 'Alerts Last Per Vehicle Alert Type'
+	lineageTag: 6e89a971-dee7-4e2e-b9a9-85f9d0c2cff7
+
+	column AlertId
+		dataType: int64
+		formatString: 0
+		lineageTag: fb4079ba-bd73-4c9e-81e9-83a4d4a8da4a
+		summarizeBy: count
+		sourceColumn: AlertId
+
+		annotation SummarizationSetBy = Automatic
+
+	column VehicleId
+		dataType: int64
+		formatString: 0
+		lineageTag: f8073a62-ce2e-4c59-900c-18921e3cfd0c
+		summarizeBy: count
+		sourceColumn: VehicleId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDateTimeUtc
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b6406128-638c-4233-80cc-5aeaa7033c22
+		summarizeBy: none
+		sourceColumn: CreatedDateTimeUtc
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column AlertTypeId
+		dataType: int64
+		formatString: 0
+		lineageTag: df4188f4-1d02-4053-bcef-cf1afa76e970
+		summarizeBy: count
+		sourceColumn: AlertTypeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertSeverityId
+		dataType: int64
+		formatString: 0
+		lineageTag: 302ec3c7-cceb-4bcf-8ccc-5253e8ae67e5
+		summarizeBy: count
+		sourceColumn: AlertSeverityId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AlertOdomotor
+		dataType: double
+		lineageTag: 1da3fffd-cd26-4387-8fad-3b9387f37801
+		summarizeBy: sum
+		sourceColumn: AlertOdomotor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Latitude
+		dataType: double
+		lineageTag: e7a50d83-a419-43e0-a230-472bf9abc5c5
+		summarizeBy: sum
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Longitude
+		dataType: double
+		lineageTag: 49afd6dd-79cb-4d23-85b8-b04a0271af6f
+		summarizeBy: sum
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RepairCostEstimateId
+		dataType: int64
+		formatString: 0
+		lineageTag: 42234c2a-5f5c-4af0-abdf-afd9a8873a26
+		summarizeBy: count
+		sourceColumn: RepairCostEstimateId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TriggeredFaultFmi
+		dataType: int64
+		formatString: 0
+		lineageTag: 9220ef88-ecb0-475c-8f22-02a4f7d80d9e
+		summarizeBy: sum
+		sourceColumn: TriggeredFaultFmi
+
+		annotation SummarizationSetBy = Automatic
+
+	column TriggeredFaultSpn
+		dataType: int64
+		formatString: 0
+		lineageTag: 6b394732-c59b-42aa-ae3d-49bee74effbd
+		summarizeBy: sum
+		sourceColumn: TriggeredFaultSpn
+
+		annotation SummarizationSetBy = Automatic
+
+	column TriggeredFaultSource
+		dataType: int64
+		formatString: 0
+		lineageTag: becec142-ea16-44e3-b268-2b27c60c106f
+		summarizeBy: sum
+		sourceColumn: TriggeredFaultSource
+
+		annotation SummarizationSetBy = Automatic
+
+	column TriggeredFaultCount
+		dataType: int64
+		formatString: 0
+		lineageTag: 57c78b13-0064-418b-902c-6007699657ba
+		summarizeBy: sum
+		sourceColumn: TriggeredFaultCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column rn
+		dataType: int64
+		formatString: 0
+		lineageTag: f38df8a0-e4f7-4a12-beab-263eddef2b77
+		summarizeBy: sum
+		sourceColumn: rn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Alerts Last Per Vehicle Alert Type' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("."),
+				    fld_rs = Source{[Name="fld_rs"]}[Data],
+				    dbo_vw_alerts_last_per_vehicle_alert_type = fld_rs{[Schema="dbo",Item="vw_alerts_last_per_vehicle_alert_type"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(dbo_vw_alerts_last_per_vehicle_alert_type,{{"Id", "AlertId"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"CreatedDateTimeUtc", type date}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

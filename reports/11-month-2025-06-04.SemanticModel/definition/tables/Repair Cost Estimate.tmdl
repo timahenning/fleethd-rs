@@ -1,0 +1,35 @@
+table 'Repair Cost Estimate'
+	lineageTag: 254caf33-973d-4cf9-a625-f1e842ec8167
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d22cf73-5572-4aba-8b1d-a2220b707ed2
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column RepairCostEstimateValue
+		dataType: double
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: c984d0b7-1161-40b3-88a0-ebd6ba7ea077
+		summarizeBy: none
+		sourceColumn: RepairCostEstimateValue
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Repair Cost Estimate' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("."),
+				    fld_rs = Source{[Name="fld_rs"]}[Data],
+				    dbo_RepairCostEstimate = fld_rs{[Schema="dbo",Item="RepairCostEstimate"]}[Data]
+				in
+				    dbo_RepairCostEstimate
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

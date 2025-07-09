@@ -1,0 +1,42 @@
+table 'Make Model'
+	lineageTag: e9fb50b7-07d3-469b-890a-dbfbdc287ae0
+
+	column 'Engine Model'
+		dataType: string
+		lineageTag: a3b0017b-6a70-4866-9270-020918799e21
+		summarizeBy: none
+		sourceColumn: Engine Model
+
+		annotation SummarizationSetBy = Automatic
+
+	column Make
+		dataType: string
+		lineageTag: 90992c75-3486-4db1-9761-b94359b0210f
+		summarizeBy: none
+		sourceColumn: Make
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Make Model'
+		dataType: string
+		lineageTag: e81e87be-52ae-42dd-818d-0cba4f9a72ec
+		summarizeBy: none
+		sourceColumn: Make Model
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Make Model' = m
+		mode: import
+		source =
+				let
+				    Source = Vehicle,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Engine Model", "Make"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+				    #"Added Custom" = Table.AddColumn(#"Removed Duplicates", "Make Model", each [Make] & " " & [Engine Model])
+				in
+				    #"Added Custom"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
