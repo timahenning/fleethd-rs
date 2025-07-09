@@ -1,0 +1,11 @@
+FleetHD Alerts,VMRS Code,VMRS Component Description,Alternate VMRS Code,VMRS Component Description
+DEF Tank Level,043-006-000,Exhaust After-Treatment Devices,053-999-013,Fuel - Diesel Engine
+Engine Protection Torque Derate Condition,003-000-000,"Instruments, Gauges, Warning & Shutdown Devices, & Meters",045-000-000,Power Plant
+Low Coolant Level,003-001-052,Sensor - Coolant Level,042-000-000,Cooling System
+Turbo VGT Actuator,043-004-074,Actuator - Turbo Wastegate,043-004-001,Turbocharger
+Water in Fuel System,044-002-020,"Sensor - Water, Fuel/Water Separator",044-000-000,Fuel System
+Crankcase Pressure Severe,045-014-007,Filter - Crankcase Ventilation,045-002-000,Cylinder Block & Crankcase
+DPF Filter,043-001-053,Filter - Diesel Particulate,043-001-053,Filter - Diesel Particulate
+Engine Intake Manifold Pressure,041-002-013,Sensor - Intake Manifold,041-002-000,Intake Manifold
+Engine Injector Meetering Rail Pressure,044-014-007,Sensor - Injection Control Pressure (ICP),044-004-000,Injectors - Mechanical
+High Coolant Temperature,003-001-018,"Switch - Indicator, Engine Coolant Temperature",042-000-000,Cooling System

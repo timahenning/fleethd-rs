@@ -1,0 +1,48 @@
+﻿_id,subject,frequency,hours
+5efa1d5efde073092c9c5256,Vehicle Alert - Engine Temperature,4:00:00,4
+60dd02df255a9b0f16c6164e,Vehicle Alert - Aftertreatment DEF Dosing Unit Input Lines,1.00:00:00,24
+60dd02df255a9b0f16c6164f,Vehicle Alert - Turbo VGT Actuator Concern,1.00:00:00,24
+60dd02df255a9b0f16c61650,Vehicle Alert - Low Coolant Level,4:00:00,4
+60dd02df255a9b0f16c61651,Vehicle Alert - Fuel Rail Pressure Low,1.00:00:00,24
+60dd02df255a9b0f16c61652,Vehicle Alert - DPF Filter Plugging,6:00:00,6
+60dd02df255a9b0f16c61653,Vehicle Alert - Crankcase Pressure Severe Level,4:00:00,4
+60dd02df255a9b0f16c61654,Vehicle Alert - Fan Control Circuit Concern,1.00:00:00,24
+60dd02df255a9b0f16c61655,Vehicle Alert - DEF Fluid Quality,1.00:00:00,24
+60dd02df255a9b0f16c61656,Vehicle Alert - Low Oil Pressure,4:00:00,4
+60dd02df255a9b0f16c61657,Vehicle Alert - Injector Metering Rail Pressure,2.00:00:00,48
+60dd02df255a9b0f16c61658,Vehicle Alert - Coolant Issues,4:00:00,4
+60dd02df255a9b0f16c61659,Vehicle Alert - Accelerator Pedal Concern,8:00:00,8
+60dd02df255a9b0f16c6165a,Vehicle Alert - Aftertreatment Fuel Shutoff Valve Concern,2.00:00:00,48
+60dd02df255a9b0f16c6165b,Vehicle Alert - SCR Outlet Temperature Sensor Concern,1.00:00:00,24
+60dd02df255a9b0f16c6165c,Vehicle Alert - ABS System Fault,6:00:00,6
+60dd02df255a9b0f16c6165d,Vehicle Alert - Engine Wait to Start Lamp Malfunction,3.00:00:00,72
+60dd02df255a9b0f16c6165e,Vehicle Alert - Water in Fuel System Fault,1.00:00:00,24
+60dd02df255a9b0f16c6165f,Vehicle Alert - Engine Protection Torque Derate Condition Exists,4:00:00,4
+60dd02df255a9b0f16c61660,Vehicle Alert - High Coolant Temperature,4:00:00,4
+60dd02df255a9b0f16c61661,Vehicle Alert - Engine Injector Meetering Rail Pressure,1.00:00:00,24
+60dd02df255a9b0f16c61662,Vehicle Alert - Communication Data Link Concern,1.00:00:00,24
+60dd02df255a9b0f16c61663,Vehicle Alert - Engine Cylinder Miss Fire,12:00:00,12
+60dd02df255a9b0f16c61664,Vehicle Alert - Fuel Rail Pressure Concern,1.00:00:00,24
+60dd02df255a9b0f16c61665,Vehicle Alert - Aftertreatment Outlet NOx Sensor Concern,23:59:59,24
+60dd02df255a9b0f16c61666,Vehicle Alert - DPF Regeneration Inhibited,1.00:00:00,24
+60dd02df255a9b0f16c61667,Vehicle Alert - Transmission Oil Temperature,4:00:00,4
+60dd02df255a9b0f16c61668,Vehicle Alert - Engine Calibration Concern,5.00:00:00,120
+60dd02df255a9b0f16c61669,Vehicle Alert - DEF Tank Level,6:00:00,6
+618459db8b257632a5dd2a84,Tire Alert - Tire Sensor,1:00:00,1
+622fa5adaa0c90125fba17f0,Tire Alert - TPMS Severe Threshold,1.00:00:00,24
+626858e8a75bb5c476912777,Telematics Alert - Geotab Feed Exceeds Messages Limit,12:00:00,12
+628688696f71c4b090645c10,Trailer Alert - Lift Gate Battery Voltage Low,1.00:00:00,24
+62c8a5e42b28df142461586a,Telematics Alert - Device Fault,1.00:00:00,24
+62c8bd0a9a142b94cf31f296,Telematics Alert - IOXEasy Device Fault,1.00:00:00,24
+63335093104ad151f142911e,Vehicle Alert - Vehicle Battery Voltage Low,1.00:00:00,24
+6388e52b291fdc33e689994a,Filterminder Alert - Engine Air Filter Service Soon,1.00:00:00,24
+6388e52b291fdc33e689994b,Filterminder Alert - Engine Air Filter Service Now,1.00:00:00,24
+6388e52b291fdc33e689994d,Filterminder Alert - Engine Oil Service Soon,1.00:00:00,24
+639361014b2ca2be5aead3e1,Tire Alert - Possible slow leak detected,1.00:00:00,24
+63cb33224e047df9f4dfe2fd,Vehicle Alert - Accident (acceleration exceeded accident limit),1.00:00:00,24
+63ec1bce155920984ee594db,Vehicle Alert - Injector,1.00:00:00,24
+63ed19fe4d3e12737f6a1ab9,Vehicle Alert - Warning Light,7.00:00:00,168
+63eeaacfeb025e55c967cac2,Tire Alert â€“ TPMS Sensor Physical Inspection Recommended,1.00:00:00,24
+641df665422733605db8b1db,Filterminder Alert - Engine Oil Service Now,1.00:00:00,24
+67a1625eb2509319b6f77610,Lytx Device,7.00:00:00,168
+67a1625eb2509319b6f77611,Lytx ECM Device,7.00:00:00,168

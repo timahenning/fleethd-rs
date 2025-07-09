@@ -1,0 +1,418 @@
+Plant Section (Region),Branch,Equipment,VMRS Component Description,Total
+ECE,FLEET-8024-EVNV,T20037,Sensor - Coolant Level,$0.00
+ECE,FLEET-8024-LEXN,S15156,Actuator - Turbocharger Wastegate,$0.00
+ECE,FLEET-8024-LEXN,S15156,Sensor - Coolant Level,$0.00
+ECE,FLEET-8024-LEXN,S17048,Filter - Crankcase Ventilation,$0.00
+ECE,FLEET-8024-LSVL,E14213,Exhaust After-Treatment Devices, $107.16 
+ECE,FLEET-8024-LSVL,S11002,Exhaust After-Treatment Devices, $760.35 
+ECE,FLEET-8024-LSVL,S22022,Sensor - Coolant Level, $102.06 
+ECE,FLEET-8024-LSVL,T15027,Exhaust After-Treatment Devices, $597.05 
+ECE,FLEET-8024-LSVL,T18038,Exhaust After-Treatment Devices, $132.68 
+ECE,FLEET-8024-LSVL,T19019,Exhaust After-Treatment Devices, $306.18 
+ECE,FLEET-8024-LSVL,T19020,Exhaust After-Treatment Devices, $163.30 
+ECE,FLEET-8024-LSVL,T19032,Exhaust After-Treatment Devices," $1,574.00 "
+ECE,FLEET-8024-LSVL,T19033,Exhaust After-Treatment Devices, $61.24 
+ECE,FLEET-8030-CINC,E14111,Filter - Diesel Particulate," $11,237.08 "
+ECE,FLEET-8030-CINC,E14112,Filter - Diesel Particulate, $76.55 
+ECE,FLEET-8030-CINC,M09012,Filter - Diesel Particulate, $76.55 
+ECE,FLEET-8030-CINC,S15077,Filter - Diesel Particulate, $102.07 
+ECE,FLEET-8030-CINC,S15079,Filter - Diesel Particulate," $1,485.57 "
+ECE,FLEET-8030-CINC,S17095,," $2,129.07 "
+ECE,FLEET-8030-CINC,T18054,Actuator - Turbocharger Wastegate, $255.15 
+ECE,FLEET-8030-CINC,T18054,Exhaust After-Treatment Devices," $2,051.92 "
+ECE,FLEET-8031-COLM,M18004,Exhaust After-Treatment Devices," $2,666.38 "
+ECE,FLEET-8031-COLM,S13021,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $51.03 
+ECE,FLEET-8031-COLM,S15080,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $25.52 
+ECE,FLEET-8031-COLM,T17129,Exhaust After-Treatment Devices," $2,218.86 "
+ECE,FLEET-8031-COLM,T19003,Exhaust After-Treatment Devices, $76.55 
+ECE,FLEET-8031-COLM,T19003,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $214.33 
+ECE,FLEET-8031-COLM,T19004,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $51.03 
+ECE,FLEET-8032-DAYT,E13122,Actuator - Turbocharger Wastegate," $2,051.31 "
+ECE,FLEET-8032-DAYT,E13122,Exhaust After-Treatment Devices, $5.10 
+ECE,FLEET-8032-DAYT,S11006,Sensor - Injection Control Pressure (ICP)," $3,942.76 "
+ECE,FLEET-8033-LITH,S16064,Actuator - Turbocharger Wastegate," $2,380.63 "
+ECE,FLEET-8033-LITH,S19064,Actuator - Turbocharger Wastegate," $5,296.99 "
+ECE,FLEET-8033-LITH,S22075,"Instruments, Gauges, Warning & Shutdown Devices, & Meters",$0.00
+ECE,FLEET-8033-MIDV,S15088,"Sensor - Water, Fuel/Water Separator"," $1,065.11 "
+ECE,FLEET-8035-SOUP,E13142,Actuator - Turbocharger Wastegate," $1,990.18 "
+ECE,FLEET-8035-SOUP,E13143,Actuator - Turbocharger Wastegate," $2,952.22 "
+ECE,FLEET-8035-SOUP,E13146,Actuator - Turbocharger Wastegate," $3,236.01 "
+ECE,FLEET-8035-SOUP,E14221,Filter - Crankcase Ventilation, $239.75 
+ECE,FLEET-8035-SOUP,S17099,Actuator - Turbocharger Wastegate," $2,288.37 "
+ECE,FLEET-8035-SOUP,T18037,Actuator - Turbocharger Wastegate," $1,916.67 "
+ECE,FLEET-8047-INDP,E13078,Exhaust After-Treatment Devices, $863.58 
+ECE,FLEET-8047-INDP,E13097,Filter - Diesel Particulate, $127.58 
+ECE,FLEET-8047-INDP,E13098,Filter - Crankcase Ventilation, $169.25 
+ECE,FLEET-8047-INDP,E13101,Actuator - Turbocharger Wastegate," $2,037.35 "
+ECE,FLEET-8047-INDP,E13104,Filter - Crankcase Ventilation, $143.73 
+ECE,FLEET-8047-SBND,E13117,Exhaust After-Treatment Devices,$0.00
+ECE,FLEET-8049-TWBG,E10005,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $163.30 
+ECE,FLEET-8049-TWBG,E14187,Exhaust After-Treatment Devices," $2,000.42 "
+ECE,FLEET-8049-TWBG,S13003,"Sensor - Water, Fuel/Water Separator", $119.82 
+ECE,FLEET-8049-TWBG,S13023,Exhaust After-Treatment Devices, $102.06 
+ECE,FLEET-8049-TWBG,S13023,Filter - Crankcase Ventilation, $319.22 
+ECE,FLEET-8049-TWBG,S16062,Exhaust After-Treatment Devices, $102.06 
+ECE,FLEET-8049-TWBG,S21136,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $51.03 
+ECE,FLEET-8049-TWBG,T15035,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $234.74 
+NCE,FLEET-8025-DETR,E13236,Actuator - Turbocharger Wastegate," $3,040.71 "
+NCE,FLEET-8025-DETR,E14088,Actuator - Turbocharger Wastegate," $3,304.42 "
+NCE,FLEET-8025-DETR,E14088,Sensor - Coolant Level,$0.00
+NCE,FLEET-8025-DETR,E14092,Actuator - Turbocharger Wastegate,$0.00
+NCE,FLEET-8025-DETR,E14097,Filter - Diesel Particulate,$0.00
+NCE,FLEET-8025-DETR,E14102,Actuator - Turbocharger Wastegate," $2,884.09 "
+NCE,FLEET-8025-DETR,E14102,Exhaust After-Treatment Devices, $63.50 
+NCE,FLEET-8025-DETR,E14102,Sensor - Coolant Level, $951.00 
+NCE,FLEET-8025-DETR,E14201,Actuator - Turbocharger Wastegate,$0.00
+NCE,FLEET-8025-DETR,N14007,Sensor - Coolant Level, $313.75 
+NCE,FLEET-8026-CADL,E13137,Filter - Diesel Particulate, $974.61 
+NCE,FLEET-8026-GALD,E10017,Filter - Diesel Particulate," $1,767.55 "
+NCE,FLEET-8026-GALD,E13176,Actuator - Turbocharger Wastegate," $3,386.77 "
+NCE,FLEET-8026-GALD,E13177,Actuator - Turbocharger Wastegate," $2,214.16 "
+NCE,FLEET-8026-GRDL,T19005,Sensor - Coolant Level,$0.00
+NCE,FLEET-8026-HOLL,E13195,Exhaust After-Treatment Devices," $1,525.18 "
+NCE,FLEET-8026-HOLL,E13195,Intake Manifold,$0.00
+NCE,FLEET-8026-HOLL,E13199,Exhaust After-Treatment Devices, $192.27 
+NCE,FLEET-8026-HOLL,E13199,Sensor - Coolant Level,$0.00
+NCE,FLEET-8026-HOLL,E13202,Filter - Diesel Particulate," $6,076.70 "
+NCE,FLEET-8026-HOLL,E13204,Exhaust After-Treatment Devices, $628.59 
+NCE,FLEET-8026-HOLL,E14087,Filter - Diesel Particulate,$0.00
+NCE,FLEET-8026-HOLL,T16001,Actuator - Turbocharger Wastegate, $354.78 
+NCE,FLEET-8026-HOLL,T16001,Exhaust After-Treatment Devices, $151.88 
+NCE,FLEET-8026-HOLL,T17121,Exhaust After-Treatment Devices, $512.72 
+NCE,FLEET-8026-HOLL,T17124,Filter - Diesel Particulate,$0.00
+NCE,FLEET-8026-HOLL,T17125,Exhaust After-Treatment Devices, $841.94 
+NCE,FLEET-8026-HOLL,T17125,Filter - Diesel Particulate, $524.95 
+NCE,FLEET-8026-HOLL,T17126,Actuator - Turbocharger Wastegate,$0.00
+NCE,FLEET-8026-HOLL,T17126,Filter - Diesel Particulate, $64.09 
+NCE,FLEET-8026-HOLL,T17127,Filter - Diesel Particulate,$0.00
+NCE,FLEET-8026-MNTM,E13168,Filter - Diesel Particulate,$0.00
+NCE,FLEET-8026-MNTM,S19067,Filter - Diesel Particulate," $1,277.92 "
+NCE,FLEET-8026-MNTM,T15032,Actuator - Turbocharger Wastegate," $2,921.23 "
+NCE,FLEET-8036-TOLE,S21114,Exhaust After-Treatment Devices, $567.75 
+NCE,FLEET-8046-PEOR,S15046,Exhaust After-Treatment Devices, $868.00 
+NCE,FLEET-8046-WATR,M12001,Filter - Crankcase Ventilation,$0.00
+NEA,FLEET-8026-MNTM,M09016,Sensor - Coolant Level," $1,137.98 "
+NEA,FLEET-8027-AVNL,N15006,Actuator - Turbocharger Wastegate, $5.10 
+NEA,FLEET-8027-AVNL,T17137,Exhaust After-Treatment Devices, $178.61 
+NEA,FLEET-8040-CRAT,E13153,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $51.03 
+NEA,FLEET-8040-CRAT,E13154,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $112.27 
+NEA,FLEET-8040-CRAT,E13157,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $142.88 
+NEA,FLEET-8040-CRAT,E14180,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $510.30 
+NEA,FLEET-8040-CRAT,E14182,"Instruments, Gauges, Warning & Shutdown Devices, & Meters"," $1,236.81 "
+NEA,FLEET-8040-CRAT,E14194,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $255.15 
+NEA,FLEET-8040-CRAT,M18070,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $193.91 
+NEA,FLEET-8040-CRAT,S13009,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $527.41 
+NEA,FLEET-8040-CRAT,S13011,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $102.06 
+NEA,FLEET-8040-CRAT,S13012,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $229.64 
+NEA,FLEET-8040-CRAT,S19038,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $153.09 
+NEA,FLEET-8040-CRAT,S21124,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $540.92 
+NEA,FLEET-8040-CRAT,S22100,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $306.19 
+NEA,FLEET-8040-CRAT,T11019,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $204.12 
+NEA,FLEET-8040-CRAT,T16035,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $306.18 
+NEA,FLEET-8040-CRAT,T16037,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $204.12 
+NEA,FLEET-8040-CRAT,T17035,"Instruments, Gauges, Warning & Shutdown Devices, & Meters"," $1,036.22 "
+NEA,FLEET-8040-CRAT,T17036,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $153.09 
+NEA,FLEET-8040-CRAT,T17037,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $117.37 
+NEA,FLEET-8040-CRAT,T18040,"Instruments, Gauges, Warning & Shutdown Devices, & Meters"," $1,352.55 "
+NEA,FLEET-8040-CRAT,T19023,"Instruments, Gauges, Warning & Shutdown Devices, & Meters",$0.00
+NEA,FLEET-8040-CRAT,T22065,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $470.40 
+NEA,FLEET-8040-CRAT,T22066,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $65.42 
+NEA,FLEET-8040-FAMT,E13163,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $51.03 
+NEA,FLEET-8040-FAMT,E13164,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $51.03 
+NEA,FLEET-8040-FAMT,S15082,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $51.03 
+NEA,FLEET-8040-FAMT,S16065,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $102.06 
+NEA,FLEET-8040-FAMT,T15029,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $51.03 
+NEA,FLEET-8040-FAMT,T18036,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $173.67 
+NEA,FLEET-8040-LEHV,T19112,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $137.78 
+NEA,FLEET-8049-TWBG,R13003,Exhaust After-Treatment Devices, $76.55 
+NWE,FLEET-8018-BOIS,M16003,Filter - Diesel Particulate,$0.00
+NWE,FLEET-8018-REDG,S13016,Actuator - Turbocharger Wastegate," $2,513.15 "
+NWE,FLEET-8018-REDG,S18068,Actuator - Turbocharger Wastegate," $2,296.02 "
+NWE,FLEET-8018-SACM,E14166,Filter - Diesel Particulate, $112.70 
+NWE,FLEET-8018-SACM,E14168,Exhaust After-Treatment Devices," $1,081.72 "
+NWE,FLEET-8018-SACM,E14168,Filter - Diesel Particulate, $510.89 
+NWE,FLEET-8018-SACM,E14170,Actuator - Turbocharger Wastegate," $1,788.02 "
+NWE,FLEET-8018-SACM,E14170,Sensor - Coolant Level, $187.83 
+NWE,FLEET-8018-SACM,E14171,Exhaust After-Treatment Devices, $255.45 
+NWE,FLEET-8018-SACM,E14171,Filter - Crankcase Ventilation, $227.06 
+NWE,FLEET-8018-SACM,E14171,Filter - Diesel Particulate," $3,237.51 "
+NWE,FLEET-8018-SACM,E14172,Filter - Diesel Particulate, $150.27 
+NWE,FLEET-8018-SACM,E14173,Filter - Crankcase Ventilation, $295.63 
+NWE,FLEET-8018-SACM,E14173,Filter - Diesel Particulate," $3,577.33 "
+NWE,FLEET-8018-SACM,E14173,Sensor - Coolant Level, $90.90 
+NWE,FLEET-8018-SACM,M19079,Filter - Diesel Particulate, $37.57 
+NWE,FLEET-8018-SACM,S15095,Filter - Diesel Particulate," $3,292.52 "
+NWE,FLEET-8018-SACM,S15097,Filter - Diesel Particulate," $4,142.03 "
+NWE,FLEET-8018-SACM,S16035,Actuator - Turbocharger Wastegate," $1,284.62 "
+NWE,FLEET-8018-SACM,S16035,Filter - Diesel Particulate, $232.91 
+NWE,FLEET-8018-SACM,S16036,Actuator - Turbocharger Wastegate," $1,786.14 "
+NWE,FLEET-8018-SACM,S16036,Exhaust After-Treatment Devices, $601.05 
+NWE,FLEET-8018-SACM,S16036,Filter - Diesel Particulate, $37.57 
+NWE,FLEET-8018-SACM,S16036,Sensor - Coolant Level, $300.52 
+NWE,FLEET-8018-SACM,S17069,Actuator - Turbocharger Wastegate," $1,885.50 "
+NWE,FLEET-8018-SACM,S17069,Filter - Diesel Particulate, $75.13 
+NWE,FLEET-8018-SACM,S17069,Sensor - Coolant Level, $145.96 
+NWE,FLEET-8018-SACM,S17070,Filter - Diesel Particulate, $37.57 
+NWE,FLEET-8018-SACM,S17071,Actuator - Turbocharger Wastegate," $2,657.63 "
+NWE,FLEET-8018-SACM,S17072,Filter - Diesel Particulate, $37.57 
+NWE,FLEET-8018-SACM,S17073,Exhaust After-Treatment Devices," $1,725.59 "
+NWE,FLEET-8018-SACM,S18069,Filter - Diesel Particulate, $37.57 
+NWE,FLEET-8018-SACM,T10008,Filter - Diesel Particulate, $75.13 
+NWE,FLEET-8018-SACM,T10009,Sensor - Coolant Level, $143.70 
+NWE,FLEET-8018-SACM,T10013,Filter - Diesel Particulate, $37.57 
+NWE,FLEET-8018-SACM,T10014,Filter - Diesel Particulate, $447.64 
+NWE,FLEET-8018-SACM,T10017,Filter - Diesel Particulate, $315.54 
+NWE,FLEET-8018-SACM,T10017,Sensor - Coolant Level, $392.34 
+NWE,FLEET-8018-SACM,T10020,Filter - Diesel Particulate, $37.57 
+NWE,FLEET-8018-SACM,T10022,Sensor - Coolant Level," $1,064.48 "
+NWE,FLEET-8018-SACM,T13005,Filter - Crankcase Ventilation, $194.51 
+NWE,FLEET-8018-SACM,T15040,Exhaust After-Treatment Devices," $1,257.02 "
+NWE,FLEET-8018-SACM,T16009,Filter - Diesel Particulate," $1,626.74 "
+NWE,FLEET-8018-SACM,T16010,Exhaust After-Treatment Devices," $6,124.62 "
+NWE,FLEET-8018-SACM,T16010,Filter - Diesel Particulate, $37.57 
+NWE,FLEET-8018-SACM,T17076,Filter - Diesel Particulate, $105.18 
+NWE,FLEET-8018-SACM,T19066,Exhaust After-Treatment Devices, $172.80 
+NWE,FLEET-8019-SANL,E14165,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $173.85 
+NWE,FLEET-8019-SANL,S10018,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $173.85 
+NWE,FLEET-8019-SANL,S10021,Sensor - Coolant Level, $292.73 
+NWE,FLEET-8019-SANL,S10025,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $300.52 
+NWE,FLEET-8019-SANL,S11022,Filter - Diesel Particulate," $4,894.87 "
+NWE,FLEET-8019-SANL,S11026,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $134.90 
+NWE,FLEET-8019-SANL,S18076,Filter - Crankcase Ventilation, $492.13 
+NWE,FLEET-8019-SANL,T11027,Actuator - Turbocharger Wastegate, $112.70 
+NWE,FLEET-8019-SANL,T11027,Filter - Diesel Particulate, $225.39 
+NWE,FLEET-8019-SANL,T11027,Sensor - Coolant Level," $7,338.95 "
+NWE,FLEET-8019-SANL,T21004,Actuator - Turbocharger Wastegate, $150.26 
+NWE,FLEET-8019-SANL,T21004,Exhaust After-Treatment Devices, $809.32 
+NWE,FLEET-8019-SANL,T21006,"Switch - Indicator, Engine Coolant Temperature", $37.57 
+NWE,FLEET-8021-SPOK,S06020,Sensor - Injection Control Pressure (ICP), $150.26 
+NWE,FLEET-8021-SPOK,S16069,Actuator - Turbocharger Wastegate," $3,014.44 "
+NWE,FLEET-8021-SPOK,T08023,Actuator - Turbocharger Wastegate, $112.70 
+NWE,FLEET-8021-SPOK,T08024,Filter - Crankcase Ventilation, $178.36 
+NWE,FLEET-8021-SPOK,T09012,Filter - Diesel Particulate, $300.52 
+NWE,FLEET-8022-CAST,S15099,Filter - Diesel Particulate, $162.69 
+NWE,FLEET-8022-CAST,S19054,Filter - Diesel Particulate, $325.77 
+NWE,FLEET-8022-CAST,S21155,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $131.72 
+NWE,FLEET-8022-CAST,T10015,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $527.05 
+NWE,FLEET-8022-CAST,T18033,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $112.70 
+NWE,FLEET-8051-RENO,M07001,Filter - Diesel Particulate, $112.70 
+NWE,FLEET-8051-RENO,R06003,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $75.14 
+NWE,FLEET-8055-DENV,E13051,Filter - Crankcase Ventilation, $217.42 
+NWE,FLEET-8055-DENV,E13051,Filter - Diesel Particulate, $985.90 
+NWE,FLEET-8055-DENV,E13053,Filter - Diesel Particulate, $428.25 
+NWE,FLEET-8055-DENV,E13062,Actuator - Turbocharger Wastegate, $37.57 
+NWE,FLEET-8055-DENV,E13067,Actuator - Turbocharger Wastegate," $1,966.87 "
+NWE,FLEET-8055-DENV,E13075,Filter - Crankcase Ventilation, $275.69 
+NWE,FLEET-8055-DENV,E13077,Actuator - Turbocharger Wastegate," $1,876.71 "
+NWE,FLEET-8055-DENV,M09003,Sensor - Coolant Level, $150.26 
+NWE,FLEET-8055-DENV,M09003,Sensor - Injection Control Pressure (ICP), $150.26 
+NWE,FLEET-8055-DENV,S17083,Actuator - Turbocharger Wastegate," $2,124.60 "
+NWE,FLEET-8055-DENV,S17083,Filter - Crankcase Ventilation, $275.70 
+NWE,FLEET-8055-DENV,T15036,Filter - Crankcase Ventilation, $844.70 
+NWE,FLEET-8055-DENV,T17039,Actuator - Turbocharger Wastegate," $2,642.05 "
+NWE,FLEET-8055-DENV,T17039,Filter - Diesel Particulate," $10,036.27 "
+NWE,FLEET-8055-DENV,T17039,"Sensor - Water, Fuel/Water Separator", $73.21 
+NWE,FLEET-8055-DENV,T17040,Actuator - Turbocharger Wastegate," $2,498.37 "
+NWE,FLEET-8055-DENV,T17040,Filter - Diesel Particulate, $895.00 
+NWE,FLEET-8055-DENV,T17041,Actuator - Turbocharger Wastegate," $3,775.05 "
+NWE,FLEET-8055-DENV,T17142,Actuator - Turbocharger Wastegate," $2,133.28 "
+NWE,FLEET-8058-ALBQ,T07013,Filter - Diesel Particulate, $503.37 
+PLA,FLEET-8058-ALBQ,S15129,Filter - Diesel Particulate, $939.30 
+PLA,FLEET-8048-BISM,E13040,Filter - Diesel Particulate," $7,085.53 "
+PLA,FLEET-8048-CRPD,E14013,Filter - Diesel Particulate," $1,336.88 "
+PLA,FLEET-8048-CRPD,E14017,Filter - Diesel Particulate, $6.90 
+PLA,FLEET-8048-CRPD,E14020,Filter - Diesel Particulate," $2,955.81 "
+PLA,FLEET-8048-DEVP,T18017,Filter - Diesel Particulate,$0.00
+PLA,FLEET-8048-DMNS,E13031,Actuator - Turbocharger Wastegate," $1,862.53 "
+PLA,FLEET-8048-DMNS,E13031,Filter - Diesel Particulate," $5,146.09 "
+PLA,FLEET-8048-DMNS,E14012,Filter - Diesel Particulate," $3,125.89 "
+PLA,FLEET-8048-DMNS,S19025,Sensor - Coolant Level," $4,304.96 "
+PLA,FLEET-8048-DMNS,T15017,Filter - Crankcase Ventilation, $906.08 
+PLA,FLEET-8048-DMNS,T15049,Filter - Diesel Particulate, $992.25 
+PLA,FLEET-8048-DMNS,T19098,Actuator - Turbocharger Wastegate," $4,819.58 "
+PLA,FLEET-8048-DMNS,T19098,Intake Manifold," $6,437.29 "
+PLA,FLEET-8048-DMNS,T19106,Actuator - Turbocharger Wastegate," $3,928.55 "
+PLA,FLEET-8048-DUBQ,S15011,Actuator - Turbocharger Wastegate," $3,664.08 "
+PLA,FLEET-8048-DUBQ,S15011,Filter - Diesel Particulate, $692.08 
+PLA,FLEET-8048-DUBQ,S15120,Sensor - Coolant Level, $468.41 
+PLA,FLEET-8048-FSCT,E13032,Filter - Diesel Particulate," $3,720.19 "
+PLA,FLEET-8048-FSCT,E14029,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $981.43 
+PLA,FLEET-8048-FSCT,S15129,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $398.49 
+PLA,FLEET-8048-HAZW,T21056,Filter - Diesel Particulate," $7,506.65 "
+PLA,FLEET-8048-LENX,E13033,Actuator - Turbocharger Wastegate," $4,208.68 "
+PLA,FLEET-8048-LENX,E14027,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $227.54 
+PLA,FLEET-8048-LENX,S15130,Filter - Diesel Particulate," $1,327.00 "
+PLA,FLEET-8048-LENX,S15130,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $206.85 
+PLA,FLEET-8048-LENX,S15135,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $137.90 
+PLA,FLEET-8048-LENX,S17037,Filter - Diesel Particulate, $255.12 
+PLA,FLEET-8048-LENX,T07010,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $186.17 
+PLA,FLEET-8048-LENX,T17144,"Instruments, Gauges, Warning & Shutdown Devices, & Meters"," $1,004.77 "
+PLA,FLEET-8048-LENX,T18009,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $172.38 
+PLA,FLEET-8048-LENX,T18010,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $682.33 
+PLA,FLEET-8048-LENX,T18019,Actuator - Turbocharger Wastegate," $11,440.97 "
+PLA,FLEET-8048-LENX,T18019,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $275.80 
+PLA,FLEET-8048-LENX,T18052,Actuator - Turbocharger Wastegate,$0.00
+PLA,FLEET-8048-LENX,T19021,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $746.84 
+PLA,FLEET-8048-MANK,S18039,Actuator - Turbocharger Wastegate,$0.00
+PLA,FLEET-8048-MANK,T17044,Filter - Diesel Particulate," $19,549.05 "
+PLA,FLEET-8048-OTMV,E14007,Filter - Diesel Particulate, $20.69 
+PLA,FLEET-8048-OTMV,S15142,Filter - Diesel Particulate," $9,976.25 "
+PLA,FLEET-8048-OTMV,T19027,Filter - Diesel Particulate," $4,814.84 "
+PLA,FLEET-8048-OTMV,T19028,Filter - Diesel Particulate," $10,829.06 "
+PLA,FLEET-8048-OTMV,T19029,Filter - Diesel Particulate, $20.69 
+PLA,FLEET-8048-OTMV,T19030,Filter - Diesel Particulate," $5,467.92 "
+PLA,FLEET-8048-OTMV,T19092,Filter - Diesel Particulate," $12,238.37 "
+PLA,FLEET-8048-OTMV,T19094,Filter - Diesel Particulate,$0.00
+PLA,FLEET-8048-OTMV,T19095,Filter - Diesel Particulate," $8,813.20 "
+PLA,FLEET-8048-OTMV,T19099,Actuator - Turbocharger Wastegate," $3,602.02 "
+PLA,FLEET-8048-OTMV,T19099,Filter - Diesel Particulate," $2,351.60 "
+PLA,FLEET-8048-OTMV,T19100,Filter - Diesel Particulate," $2,008.45 "
+PLA,FLEET-8048-OTMV,T19102,Filter - Diesel Particulate," $1,386.17 "
+PLA,FLEET-8048-OTMV,T19103,Filter - Diesel Particulate," $5,595.23 "
+PLA,FLEET-8048-OTMV,T19104,Filter - Diesel Particulate," $6,791.52 "
+PLA,FLEET-8048-OTMV,T21050,Filter - Diesel Particulate, $13.79 
+PLA,FLEET-8048-OTMV,T21052,Filter - Diesel Particulate," $1,683.00 "
+PLA,FLEET-8048-ROCH,S18023,Actuator - Turbocharger Wastegate," $4,052.97 "
+PLA,FLEET-8048-ROCH,S18024,Actuator - Turbocharger Wastegate," $2,780.61 "
+PLA,FLEET-8048-SCLD,T15018,Filter - Diesel Particulate," $12,752.83 "
+PLA,FLEET-8048-SFLS,S15013,Actuator - Turbocharger Wastegate," $3,500.39 "
+PLA,FLEET-8048-SFLS,S15118,Actuator - Turbocharger Wastegate,$0.00
+PLA,FLEET-8048-SFLS,S15136,Filter - Diesel Particulate,$0.00
+PLA,FLEET-8048-SFLS,S18006,Actuator - Turbocharger Wastegate,$0.00
+PLA,FLEET-8048-SJSP,S18028,Actuator - Turbocharger Wastegate," $3,626.41 "
+PLA,FLEET-8048-SPNC,S09089,Filter - Diesel Particulate," $2,855.85 "
+PLA,FLEET-8048-STPL,S18020,Actuator - Turbocharger Wastegate," $2,543.47 "
+PLA,FLEET-8048-STPL,S18030,Actuator - Turbocharger Wastegate," $2,747.16 "
+PLA,FLEET-8048-STPL,S18037,Actuator - Turbocharger Wastegate," $2,809.28 "
+PLA,FLEET-8048-STPL,T15019,Filter - Diesel Particulate, $737.24 
+PLA,FLEET-8048-STPL,T15048,Actuator - Turbocharger Wastegate," $2,987.35 "
+PLA,FLEET-8048-STPL,T16028,Sensor - Coolant Level," $1,407.95 "
+PLA,FLEET-8048-STPL,T17018,Filter - Diesel Particulate," $3,720.19 "
+PLA,FLEET-8048-STPL,T17042,Filter - Diesel Particulate,$0.00
+PLA,FLEET-8048-STPL,T17046,Sensor - Coolant Level, $737.30 
+PLA,FLEET-8048-STPL,T18011,Filter - Diesel Particulate," $6,164.11 "
+PLA,FLEET-8048-STPL,T19026,Filter - Diesel Particulate," $2,099.77 "
+PLA,FLEET-8048-SUPR,E13036,Actuator - Turbocharger Wastegate," $5,534.12 "
+PLA,FLEET-8048-SUPR,S15009,Filter - Diesel Particulate," $1,254.34 "
+PLA,FLEET-8048-SUPR,T18005,Actuator - Turbocharger Wastegate," $11,131.96 "
+PLA,FLEET-8048-TOPK,S09081,Sensor - Coolant Level, $325.06 
+PLA,FLEET-8048-TOPK,T17145,Actuator - Turbocharger Wastegate," $2,877.43 "
+PLA,FLEET-8048-TOPK,T17145,Filter - Diesel Particulate," $2,335.45 "
+PLA,FLEET-8048-TOPK,T18007,Actuator - Turbocharger Wastegate,$0.00
+PLA,FLEET-8048-TOPK,T18007,Filter - Diesel Particulate," $1,831.81 "
+PLA,FLEET-8048-WBRL,S15147,Filter - Diesel Particulate,$0.00
+PLA,FLEET-8048-WFRG,E13030,Filter - Diesel Particulate,$0.00
+PLA,FLEET-8048-WFRG,E14008,Filter - Diesel Particulate,$0.00
+PLA,FLEET-8048-WICH,S08028,Sensor - Coolant Level, $373.24 
+PLA,FLEET-8057-OMHA,E14011,Filter - Diesel Particulate," $5,895.87 "
+PLA,FLEET-8057-OMHA,S17023,Actuator - Turbocharger Wastegate, $448.18 
+PLA,FLEET-8057-OMHA,S17025,Filter - Crankcase Ventilation, $637.43 
+PLA,FLEET-8057-OMHA,S17025,Filter - Diesel Particulate," $1,410.97 "
+PLA,FLEET-8057-OMHA,S17026,Actuator - Turbocharger Wastegate," $1,913.71 "
+PLA,FLEET-8057-OMHA,S17026,Filter - Diesel Particulate," $8,603.93 "
+PLA,FLEET-8057-OMHA,S17029,Filter - Diesel Particulate," $2,049.03 "
+PLA,FLEET-8057-OMHA,T17045,Sensor - Coolant Level, $545.18 
+PLA,FLEET-8057-OMHA,T18058,Filter - Diesel Particulate,$0.00
+PLA,FLEET-8057-OMHA,T19001,Filter - Diesel Particulate,$0.00
+SCA,FLEET-8008-FRES,M19066,Exhaust After-Treatment Devices, $386.62 
+SCA,FLEET-8008-FRES,S16037,Actuator - Turbocharger Wastegate," $2,149.04 "
+SCA,FLEET-8008-FRES,S18065,Actuator - Turbocharger Wastegate," $2,435.08 "
+SCA,FLEET-8008-FRES,S19045,Exhaust After-Treatment Devices," $5,393.35 "
+SCA,FLEET-8008-FRES,S19047,Exhaust After-Treatment Devices, $618.79 
+SCA,FLEET-8008-FRES,S22118,Exhaust After-Treatment Devices, $126.96 
+SCA,FLEET-8008-FRES,T10042,Exhaust After-Treatment Devices, $158.70 
+SCA,FLEET-8008-FRES,T12007,Exhaust After-Treatment Devices," $1,806.49 "
+SCA,FLEET-8008-FRES,T15042,Actuator - Turbocharger Wastegate," $2,261.27 "
+SCA,FLEET-8008-FRES,T17077,Exhaust After-Treatment Devices," $1,973.78 "
+SCA,FLEET-8009-ORNG,E14154,Actuator - Turbocharger Wastegate," $1,047.42 "
+SCA,FLEET-8009-ORNG,T10044,Filter - Diesel Particulate," $1,758.40 "
+SCA,FLEET-8009-ORNG,T17080,Actuator - Turbocharger Wastegate, $666.54 
+SCA,FLEET-8010-RIVS,S16044,Filter - Diesel Particulate, $139.66 
+SCA,FLEET-8010-RIVS,S17081,Actuator - Turbocharger Wastegate," $1,952.93 "
+SCA,FLEET-8010-RIVS,T11006,Filter - Diesel Particulate, $793.50 
+SCA,FLEET-8010-RIVS,T18043,Actuator - Turbocharger Wastegate," $2,000.61 "
+SCA,FLEET-8010-RIVS,T18043,Filter - Diesel Particulate, $484.68 
+SCA,FLEET-8010-RIVS,T18044,Filter - Diesel Particulate, $582.25 
+SCA,FLEET-8011-SAND,E14152,Intake Manifold, $525.64 
+SCA,FLEET-8011-SAND,E14152,Sensor - Coolant Level, $126.96 
+SCA,FLEET-8011-SAND,M19069,Filter - Diesel Particulate, $190.44 
+SCA,FLEET-8011-SAND,S15108,Exhaust After-Treatment Devices,$0.00
+SCA,FLEET-8011-SAND,S15108,Filter - Diesel Particulate," $6,398.91 "
+SCA,FLEET-8011-SAND,T10040,Sensor - Coolant Level, $63.48 
+SCA,FLEET-8011-SAND,T11003,Filter - Diesel Particulate, $444.36 
+SCA,FLEET-8011-SAND,T15045,Filter - Crankcase Ventilation, $184.57 
+SCA,FLEET-8012-SANF,S12029,Filter - Crankcase Ventilation," $1,107.86 "
+SCA,FLEET-8012-SANF,S19037,Filter - Diesel Particulate, $105.09 
+SCA,FLEET-8012-SANF,S20046,Filter - Crankcase Ventilation, $222.18 
+SCA,FLEET-8012-SANF,S22037,Filter - Diesel Particulate, $193.96 
+SCA,FLEET-8012-SANF,S22047,Filter - Diesel Particulate, $130.48 
+SCA,FLEET-8012-SANF,T10026,Exhaust After-Treatment Devices, $253.92 
+SCA,FLEET-8012-SANF,T19059,Filter - Diesel Particulate, $162.22 
+SCA,FLEET-8012-SANF,T19060,Filter - Crankcase Ventilation, $427.17 
+SCA,FLEET-8012-SANF,T19060,Filter - Diesel Particulate, $162.22 
+SCA,FLEET-8012-SANF,T19061,Exhaust After-Treatment Devices, $222.18 
+SCA,FLEET-8012-SANF,T19061,Filter - Diesel Particulate, $193.96 
+SCA,FLEET-8012-SANF,T20075,Filter - Diesel Particulate, $162.22 
+SCA,FLEET-8012-SANF,T20075,Intake Manifold, $126.96 
+SCA,FLEET-8014-VERN,M18055,Actuator - Turbocharger Wastegate," $1,615.04 "
+SCA,FLEET-8014-VERN,M19071,Filter - Diesel Particulate, $444.36 
+SCA,FLEET-8014-VERN,S10026,Filter - Diesel Particulate, $95.22 
+SCA,FLEET-8014-VERN,S11043,Filter - Diesel Particulate, $317.40 
+SCA,FLEET-8014-VERN,S15105,Actuator - Turbocharger Wastegate," $1,663.62 "
+SCA,FLEET-8014-VERN,S15105,Filter - Diesel Particulate, $126.96 
+SCA,FLEET-8014-VERN,S21055,Filter - Crankcase Ventilation, $31.74 
+SCA,FLEET-8014-VERN,S22035,Intake Manifold, $120.61 
+SCA,FLEET-8014-VERN,T10032,Filter - Crankcase Ventilation, $95.91 
+SCA,FLEET-8014-VERN,T10034,Filter - Diesel Particulate, $507.84 
+SCA,FLEET-8014-VERN,T10035,Filter - Crankcase Ventilation, $95.91 
+SCA,FLEET-8014-VERN,T10035,Filter - Diesel Particulate," $5,760.59 "
+SCA,FLEET-8014-VERN,T10041,Exhaust After-Treatment Devices, $190.44 
+SCA,FLEET-8014-VERN,T10041,Filter - Diesel Particulate, $63.48 
+SCA,FLEET-8014-VERN,T15044,Filter - Crankcase Ventilation, $122.17 
+SCA,FLEET-8014-VERN,T16011,Actuator - Turbocharger Wastegate," $2,535.80 "
+SCA,FLEET-8014-VERN,T16011,Filter - Diesel Particulate, $507.84 
+SCA,FLEET-8014-VERN,T16018,Filter - Diesel Particulate, $95.22 
+SCA,FLEET-8014-VERN,T17083,Actuator - Turbocharger Wastegate," $2,728.12 "
+SCA,FLEET-8014-VERN,T17083,Filter - Diesel Particulate, $82.47 
+SCA,FLEET-8014-VERN,T18046,Filter - Diesel Particulate, $63.48 
+SCA,FLEET-8014-VERN,T19052,Filter - Diesel Particulate," $1,465.15 "
+SCA,FLEET-8014-VERN,T19054,Sensor - Coolant Level, $269.74 
+SCA,FLEET-8014-VERN,T19064,Filter - Crankcase Ventilation, $423.78 
+SCA,FLEET-8014-VERN,T19064,Filter - Diesel Particulate, $514.19 
+SCE,FLEET-8001-AUST,T17090,Actuator - Turbocharger Wastegate," $3,043.93 "
+SCE,FLEET-8002-CRPC,S07065,Filter - Diesel Particulate," $1,697.27 "
+SCE,FLEET-8002-CRPC,S19071,Intake Manifold,$0.00
+SCE,FLEET-8005-SANA,T17133,Filter - Diesel Particulate, $966.20 
+SEA,FLEET-8041-JKSV,S16012,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $32.04 
+SEA,FLEET-8041-JKSV,T17085,Filter - Diesel Particulate, $752.69 
+SEA,FLEET-8041-JKSV,T19016,Actuator - Turbocharger Wastegate," $1,669.60 "
+SEA,FLEET-8041-ORMB,E14225,Filter - Diesel Particulate," $3,582.03 "
+SEA,FLEET-8041-ORMB,E14225,Sensor - Coolant Level, $666.61 
+SEA,FLEET-8041-ORMB,S18046,Actuator - Turbocharger Wastegate, $324.21 
+SEA,FLEET-8041-ORMB,S19043,Sensor - Coolant Level, $283.55 
+SEA,FLEET-8041-ORMB,S19060,Sensor - Coolant Level, $745.79 
+SEA,FLEET-8042-MAMI,S08014,Sensor - Injection Control Pressure (ICP), $744.62 
+SEA,FLEET-8042-MAMI,S10002,Sensor - Injection Control Pressure (ICP), $350.00 
+SEA,FLEET-8042-MAMI,T17149,Exhaust After-Treatment Devices, $974.81 
+SEA,FLEET-8045-CHTN,000000000000001228,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $177.80 
+SEA,FLEET-8045-CHTN,E14214,Actuator - Turbocharger Wastegate," $5,894.93 "
+SEA,FLEET-8045-CHTN,T23006,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $355.61 
+SEA,FLEET-8045-GODV,M19039,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $422.91 
+SEA,FLEET-8045-GODV,S17044,Filter - Crankcase Ventilation," $1,357.31 "
+SEA,FLEET-8045-GODV,S19001,Exhaust After-Treatment Devices," $1,911.53 "
+SEA,FLEET-8045-GODV,S22135,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $564.84 
+SEA,FLEET-8045-GODV,T21063,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $196.12 
+SEA,FLEET-8045-GODV,T22032,"Instruments, Gauges, Warning & Shutdown Devices, & Meters"," $5,730.60 "
+SEA,FLEET-8045-KNXV,M18039,Actuator - Turbocharger Wastegate," $2,905.02 "
+SEA,FLEET-8045-KNXV,S16057,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $602.76 
+SEA,FLEET-8045-KNXV,T18063,Actuator - Turbocharger Wastegate," $4,529.97 "
+SEA,FLEET-8045-MEMP,E13106,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $329.52 
+SEA,FLEET-8045-MEMP,E13258,Actuator - Turbocharger Wastegate," $4,193.33 "
+SEA,FLEET-8045-MEMP,E14220,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $400.04 
+SEA,FLEET-8045-MEMP,M19050,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $101.31 
+SEA,FLEET-8045-MEMP,M19051,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $394.59 
+SEA,FLEET-8045-MEMP,M19052,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $322.06 
+SEA,FLEET-8045-UNIC,S18086,Sensor - Coolant Level, $974.17 
+SEA,FLEET-8056-BOYB,E11016,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $96.11 
+SEA,FLEET-8056-BOYB,S18085,Actuator - Turbocharger Wastegate," $2,209.69 "
+SEA,FLEET-8056-BOYB,T15052,"Instruments, Gauges, Warning & Shutdown Devices, & Meters", $700.72 
